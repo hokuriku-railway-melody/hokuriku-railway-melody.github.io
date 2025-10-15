@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="北陸駅メロ集">
+  <meta property="og:url" content="https://yiyu-kamo.github.io/railway-melody/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="北陸駅メロ集">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="北陸駅メロ集">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="twitter:url" content="https://yiyu-kamo.github.io/railway-melody/">
+
+  <title>北陸駅メロ集 | ホーム</title>
+  <link rel="stylesheet" href="https://yiyu-kamo.github.io/railway-melody/style.css">
+  <link rel="icon" href="https://yiyu-kamo.github.io/railway-melody/image/683_thunderbird.png">
+  <link rel="canonical" href="https://yiyu-kamo.github.io/railway-melody/">
+</head>
+<body>
+  <header>
+    <h1>北陸駅メロ集</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>概要</h2>
+        <p>このページは、北陸地区の駅メロディーをまとめたものです。</p>
+      </section>
+      <section>
+        <h2>お知らせ</h2>
+        <marquee class="notice-text" behavior="scroll" direction="left" scrollamount="7">
+          <span style="color:#00ff00">本日も北陸駅メロ集をご利用くださいましてありがとうございます。</span>
+          <span style="color:#ff8000">お客様にお願いいたします。</span>
+          <span style="color:#00ff00">「北陸駅メロ集」は、</span>
+          <span style="color:#ff0000">2025年10月15日に開始したばかり</span>
+          <span style="color:#ff8000">の不完全なサイト</span>
+          <span style="color:#00ff00">です。</span>
+          <span style="color:#00ff00">このサイトは、</span>
+          <span style="color:#ff0000">問い合わせ先の一覧を書いたページ</span>
+          <span style="color:#00ff00">を設置しています。</span>
+          <span style="color:#ff0000">緊急を要する場合</span>
+          <span style="color:#00ff00">や</span>
+          <span style="color:#ff0000">不明なバグを発見した場合は、</span>
+          <span style="color:#ff8000">問い合わせでページ運営者にお知らせください。</span>
+        </marquee>
+      </section>
+      <section>
+        <h2>最近の更新</h2>
+        <ul>
+          <li>2025/10/15 | ページを作成</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
