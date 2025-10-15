@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="北陸駅メロ集">
+  <meta property="og:url" content="https://hokuriku-railway-melody.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="北陸駅メロ集">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="北陸駅メロ集">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="twitter:url" content="https://hokuriku-railway-melody.github.io/">
+
+  <title>北陸駅メロ集 | 東日本旅客鉄道</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/455_blue.png">
+  <link rel="canonical" href="https://hokuriku-railway-melody.github.io/">
+</head>
+<body>
+  <header>
+    <h1><img src="https://hokuriku-railway-melody.github.io/image/455_blue.png" alt="鉄道車両画像"> 北陸駅メロ集</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>メロディー一覧</h2>
+        <p>北陸地区のメロディーの一覧です。</p>
+      </section>
+      <section>
+      <h2>会社</h2>
+        <a href="https://hokuriku-railway-melody.github.io/melody/eastjapanrailway/" class="contact-button">東日本旅客鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/hokuetsuexpress/" class="contact-button">北越急行</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/echigotokimeki/" class="contact-button">えちごトキめき鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/ainokazetoyama/" class="contact-button">あいの風とやま鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/toyamachiho/" class="contact-button">富山地方鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/kurobegorge/" class="contact-button">黒部峡谷鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/tateyamakurobekanko/" class="contact-button">立山黒部貫光</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/manyosen/" class="contact-button">万葉線</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/ishikawa/" class="contact-button">IRいしかわ鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/noto/" class="contact-button">のと鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/hokuriku/" class="contact-button">北陸鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/hapilinefukui/" class="contact-button">ハピラインふくい</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/echizen/" class="contact-button">えちぜん鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/fukui/" class="contact-button">福井鉄道</a>
+        <a href="https://hokuriku-railway-melody.github.io/melody/westjapanrailway/" class="contact-button">西日本旅客鉄道</a>
+      </section>
+      <section>
+        <h2>曲名</h2>
+        <strong><span style="color:#ff0000">現在作成中です</span></strong>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
