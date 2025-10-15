@@ -95,3 +95,21 @@ footer {
   box-sizing: border-box;
   padding: 0.5em;
 }
+
+.contact-button {
+  display: inline-block;
+  background-color: #00a7e3;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #3cbceb;
+}
