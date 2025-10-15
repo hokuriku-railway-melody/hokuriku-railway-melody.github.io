@@ -102,15 +102,17 @@ footer {
   color: #fff;
   font-weight: bold;
   font-size: 1em;
-  font-family: sans-serif;
-  padding: 0.5em 1em;
-  border-radius: 4px;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1em;
 }
 
 .contact-button:hover {
   background-color: #3cbceb;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .text-image {
