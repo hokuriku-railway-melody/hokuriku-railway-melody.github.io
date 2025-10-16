@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:url" content="https://hokuriku-railway-melody.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="twitter:url" content="https://hokuriku-railway-melody.github.io/">
+
+  <title>ほくりく駅メロ図鑑 | </title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/521_1st.png">
+  <link rel="canonical" href="https://hokuriku-railway-melody.github.io/">
+</head>
+<body>
+  <header>
+    <h1><img src="https://hokuriku-railway-melody.github.io/image/521_1st.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>リンク集</h2>
+        <p>このサイトに関連したリンク集です。</p>
+        <a href="http://www.trainfrontview.net/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/521_1st.png" alt="画像元">【アイコン】画像元</a>
+        <a href="https://ssmn93.github.io/depart-melody/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/e233-8000.png" alt="どこでもステーションベル">【協力】どこでもステーションベル</a>
+        <a href="https://www.te2do.jp/" class="contact-button">【音源】鉄道モバイル</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
