@@ -1,6 +1,9 @@
 [
   { "title": "ホーム", "link": "https://hokuriku-railway-melody.github.io/" },
-  { "title": "会社から選ぶ", "link": "https://hokuriku-railway-melody.github.io/melody/" },
+  { "title": "会社から選ぶ", "link": "https://hokuriku-railway-melody.github.io/company/" },
+  { "title": "路線から選ぶ", "link": "https://hokuriku-railway-melody.github.io/line/" },
+  { "title": "駅から選ぶ", "link": "https://hokuriku-railway-melody.github.io/station/" },
+  { "title": "曲から選ぶ", "link": "https://hokuriku-railway-melody.github.io/melody/" },
   { "title": "お問い合わせ", "link": "https://hokuriku-railway-melody.github.io/support/" },
   { "title": "リンク集", "link": "https://hokuriku-railway-melody.github.io/link/" }
 ]
