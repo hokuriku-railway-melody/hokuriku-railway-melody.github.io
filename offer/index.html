@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:url" content="https://hokuriku-railway-melody.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="twitter:url" content="https://hokuriku-railway-melody.github.io/">
+
+  <title>ほくりく駅メロ図鑑 | 提供</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/455.png">
+  <link rel="canonical" href="https://hokuriku-railway-melody.github.io/">
+</head>
+<body>
+  <header>
+    <h1><img src="https://hokuriku-railway-melody.github.io/image/455.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>提供</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>内容</th>
+              <td>名前等</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>メロディー等提供募集中</th>
+              <td>「問い合わせ」のフォームで提供を</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
