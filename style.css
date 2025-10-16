@@ -120,3 +120,39 @@ footer {
     width: auto;
     vertical-align: middle;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5em;
+  font-family: "Segoe UI", "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+table thead {
+  background-color: #f2f9fc;
+}
+
+table th,
+table td {
+  border: 1px solid #d0eaf5;
+  padding: 0.8em 1em;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  background-color: #e6f4fa;
+  font-weight: bold;
+  color: #00a7e3;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9fcfe;
+}
+
+table tbody tr:hover {
+  background-color: #e0f5ff;
+}
