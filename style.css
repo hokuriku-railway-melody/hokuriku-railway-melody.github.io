@@ -29,9 +29,28 @@ header h1 {
 
 aside#menu {
   width: 220px;
+  min-width: 180px;
+  max-width: 100%;
   background-color: #f2f9fc;
   border-right: 1px solid #d0eaf5;
   padding: 1.5em;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside#menu {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #d0eaf5;
+  }
+
+  main#content {
+    padding: 1.5em;
+  }
 }
 
 aside#menu ul {
