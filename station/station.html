@@ -75,14 +75,17 @@
 
         const lines = match.line.split(",");
         const urls = match.lineurl.split(",");
+        const colors = match.color.split(",");
+        
         const lineHTML = lines.map((line, i) => {
           const url = urls[i];
           const color = colors[i] || "#ccc";
           const span = `<span class="line-color" style="background-color:${color};"></span>`;
           return url !== "none"
-            ? `<a href="${url}" class="line-link">${span}${line}</a>`
-            : `<span class="line-link">${span}${line}</span>`;
+            ? `<a href="${url}" class="contact-button">${span}${line}</a>`
+            : `<span class="contact-button">${span}${line}</span>`;
         }).join("<br>");
+        
         document.getElementById("line-links").innerHTML = lineHTML;
 
         const platforms = match.platform.split(",");
