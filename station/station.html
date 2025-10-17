@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑" />
+  <meta property="og:url" content="https://hokuriku-railway-melody.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑" />
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。" />
+  <meta name="twitter:url" content="https://hokuriku-railway-melody.github.io/" />
+
+  <title>ほくりく駅メロ図鑑</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css" />
+  <link rel="icon" href="" id="favicon" />
+  <link rel="canonical" href="https://hokuriku-railway-melody.github.io/" />
+</head>
+<body>
+  <header>
+    <h1><img id="station-image" src="" alt="鉄道車両画像" class="text-image" /> ほくりく駅メロ図鑑</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2 id="station-heading"></h2>
+        <div id="line-links"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>ホーム</th>
+              <th>発着</th>
+              <th>曲</th>
+              <th>音声</th>
+              <th>概要</th>
+            </tr>
+          </thead>
+          <tbody id="station-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const com = params.get("com");
+    const sta = params.get("sta");
+
+    fetch("https://hokuriku-railway-melody.github.io/station.json")
+      .then(res => res.json())
+      .then(data => {
+        const match = data.find(item => item.com === com && item.sta === sta);
+        if (!match) return;
+
+        document.title = `ほくりく駅メロ図鑑 | ${match.natsta}`;
+        document.getElementById("favicon").href = match.image;
+        document.getElementById("station-image").src = match.image;
+
+        const colors = match.color.split(",");
+        const colorSpans = colors.map(c => `<span style="display:inline-block;width:1em;height:1em;background-color:${c};margin:0 0.2em;"></span>`).join("");
+        document.getElementById("station-heading").innerHTML = `${colorSpans}${match.natcom} ${match.natsta}${colorSpans}`;
+
+        const lines = match.line.split(",");
+        const urls = match.lineurl.split(",");
+        const lineHTML = lines.map((line, i) => {
+          const url = urls[i];
+          const color = colors[i] || "#ccc";
+          const span = `<span class="line-color" style="background-color:${color};"></span>`;
+          return url !== "none"
+            ? `<a href="${url}" class="line-link">${span}${line}</a>`
+            : `<span class="line-link">${span}${line}</span>`;
+        }).join("<br>");
+        document.getElementById("line-links").innerHTML = lineHTML;
+
+        const platforms = match.platform.split(",");
+        const ads = match.ad.split(",");
+        const sounds = match.sound.split(",");
+        const melodies = match.melody.split(",");
+        const notes = match.note.split(",");
+
+        const tbody = document.getElementById("station-table-body");
+        tbody.innerHTML = "";
+
+        for (let i = 0; i < platforms.length; i++) {
+          const tr = document.createElement("tr");
+
+          const th1 = document.createElement("th");
+          th1.textContent = platforms[i];
+          tr.appendChild(th1);
+
+          const th2 = document.createElement("th");
+          th2.textContent = ads[i];
+          tr.appendChild(th2);
+
+          const td1 = document.createElement("td");
+          td1.textContent = sounds[i];
+          tr.appendChild(td1);
+
+          const td2 = document.createElement("td");
+          if (melodies[i] !== "none") {
+            const audio = document.createElement("audio");
+            audio.controls = true;
+            audio.src = melodies[i];
+            td2.appendChild(audio);
+          } else {
+            td2.textContent = "なし";
+          }
+          tr.appendChild(td2);
+
+          const td3 = document.createElement("td");
+          td3.textContent = notes[i] || "-";
+          tr.appendChild(td3);
+
+          tbody.appendChild(tr);
+        }
+      });
+
+    fetch("https://hokuriku-railway-melody.github.io/menu.json")
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById("menu");
+        const ul = document.createElement("ul");
+        data.forEach(item => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
