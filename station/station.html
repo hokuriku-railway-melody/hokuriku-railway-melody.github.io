@@ -59,42 +59,75 @@
     const params = new URLSearchParams(location.search);
     const com = params.get("com");
     const sta = params.get("sta");
-
+  
     fetch("https://hokuriku-railway-melody.github.io/station.json")
       .then(res => res.json())
       .then(data => {
         const match = data.find(item => item.com === com && item.sta === sta);
         if (!match) return;
-
+  
         document.title = `ほくりく駅メロ図鑑 | ${match.natsta}`;
         document.getElementById("favicon").href = match.image;
         document.getElementById("station-image").src = match.image;
-
-        const colors = match.color.split(",");
-        const segmentHeight = 100 / colors.length;
-        const segments = colors.map((c, i) => `${c} ${i * segmentHeight}%, ${c} ${(i + 1) * segmentHeight}%`).join(", ");
-        const colorSpan = `<span class="line-color" style="background: linear-gradient(to bottom, ${segments});"></span>`;
-        document.getElementById("station-heading").innerHTML = `${colorSpan}${match.natcom} ${match.natsta}${colorSpan}`;
-
+  
+        const heading = document.getElementById("station-heading");
+        heading.textContent = `${match.natcom} ${match.natsta}`;
+  
+        if (
+          match.numshape !== "none" &&
+          match.numcolor !== "none" &&
+          match.numpaint !== "none" &&
+          match.numnum !== "none" &&
+          match.numtextcolor !== "none"
+        ) {
+          const shape = match.numshape;
+          const color = match.numcolor;
+          const paint = match.numpaint;
+          const sign = match.numsign;
+          const num = match.numnum;
+          const textColor = match.numtextcolor;
+  
+          const badge = document.createElement("span");
+          badge.style.width = "48px";
+          badge.style.height = "48px";
+          badge.style.display = "inline-flex";
+          badge.style.flexDirection = "column";
+          badge.style.justifyContent = "center";
+          badge.style.alignItems = "center";
+          badge.style.fontSize = "12px";
+          badge.style.fontWeight = "bold";
+          badge.style.color = textColor;
+          badge.style.marginLeft = "0.5em";
+          badge.style.border = `2px solid ${color}`;
+          badge.style.backgroundColor = paint === "fill" ? color : "#fff";
+          if (shape === "circle") badge.style.borderRadius = "50%";
+  
+          badge.innerHTML = sign !== "none"
+            ? `<div style="line-height:1.1;"><div>${sign}</div><div>${num}</div></div>`
+            : `<div>${num}</div>`;
+  
+          heading.appendChild(badge);
+        }
+  
         const upNames = match.up?.split(",") || [];
         const downNames = match.down?.split(",") || [];
         const upUrls = match.upurl?.split(",") || [];
         const downUrls = match.downurl?.split(",") || [];
-
+  
         const upLinks = upNames.map((name, i) => {
           const url = upUrls[i];
           return url !== "none"
             ? `<a href="${url}" class="contact-button">${name}</a>`
             : `<span class="contact-button">${name}</span>`;
         }).join("・");
-
+  
         const downLinks = downNames.map((name, i) => {
           const url = downUrls[i];
           return url !== "none"
             ? `<a href="${url}" class="contact-button">${name}</a>`
             : `<span class="contact-button">${name}</span>`;
         }).join("・");
-
+  
         const navHTML = `
           <div style="margin: 1em 0;">
             ${upLinks ? `<span style="margin-right:1em;">←${upLinks}</span>` : ""}
@@ -102,43 +135,41 @@
           </div>
         `;
         document.getElementById("station-nav").innerHTML = navHTML;
-        
+  
         const lines = match.line.split(",");
         const urls = match.lineurl.split(",");
-        
         const lineHTML = lines.map((line, i) => {
           const url = urls[i];
           return url !== "none"
             ? `<a href="${url}" class="contact-button">${line}</a>`
             : `<span class="contact-button">${line}</span>`;
         }).join("<br>");
-        
         document.getElementById("line-links").innerHTML = lineHTML;
-
+  
         const platforms = match.platform.split(",");
         const ads = match.ad.split(",");
         const sounds = match.sound.split(",");
         const melodies = match.melody.split(",");
         const notes = match.note.split(",");
-
+  
         const tbody = document.getElementById("station-table-body");
         tbody.innerHTML = "";
-
+  
         for (let i = 0; i < platforms.length; i++) {
           const tr = document.createElement("tr");
-
+  
           const th1 = document.createElement("th");
           th1.textContent = platforms[i];
           tr.appendChild(th1);
-
+  
           const th2 = document.createElement("th");
           th2.textContent = ads[i];
           tr.appendChild(th2);
-
+  
           const td1 = document.createElement("td");
           td1.textContent = sounds[i];
           tr.appendChild(td1);
-
+  
           const td2 = document.createElement("td");
           if (melodies[i] !== "none") {
             const audio = document.createElement("audio");
@@ -149,15 +180,15 @@
             td2.textContent = "なし";
           }
           tr.appendChild(td2);
-
+  
           const td3 = document.createElement("td");
           td3.textContent = notes[i] || "-";
           tr.appendChild(td3);
-
+  
           tbody.appendChild(tr);
         }
       });
-
+  
     fetch("https://hokuriku-railway-melody.github.io/menu.json")
       .then(res => res.json())
       .then(data => {
