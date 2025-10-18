@@ -32,6 +32,7 @@
 
     <main id="content">
       <section>
+        <div id="station-nav"></div>
         <h2 id="station-heading"></h2>
         <div id="line-links"></div>
         <table>
@@ -70,21 +71,45 @@
         document.getElementById("station-image").src = match.image;
 
         const colors = match.color.split(",");
-        const colorSpans = colors.map(c => `<span style="display:inline-block;width:1em;height:1em;background-color:${c};margin:0 0.2em;"></span>`).join("");
-        document.getElementById("station-heading").innerHTML = `${colorSpans}${match.natcom} ${match.natsta}${colorSpans}`;
+        const gradient = `linear-gradient(to bottom, ${colors.join(",")})`;
+        const colorSpan = `<span class="line-color" style="background: ${gradient};"></span>`;
+        document.getElementById("station-heading").innerHTML = `${colorSpan}${match.natcom} ${match.natsta}${colorSpan}`;
+
+        const upNames = match.up?.split(",") || [];
+        const downNames = match.down?.split(",") || [];
+        const upUrls = match.upurl?.split(",") || [];
+        const downUrls = match.downurl?.split(",") || [];
+
+        const upLinks = upNames.map((name, i) => {
+          const url = upUrls[i];
+          return url !== "none"
+            ? `<a href="${url}" class="contact-button">${name}</a>`
+            : `<span class="contact-button">${name}</span>`;
+        }).join("・");
+
+        const downLinks = downNames.map((name, i) => {
+          const url = downUrls[i];
+          return url !== "none"
+            ? `<a href="${url}" class="contact-button">${name}</a>`
+            : `<span class="contact-button">${name}</span>`;
+        }).join("・");
+
+        const navHTML = `
+          <div style="margin: 1em 0;">
+            ${upLinks ? `<span style="margin-right:1em;">←${upLinks}</span>` : ""}
+            ${downLinks ? `<span style="margin-left:1em;">${downLinks}→</span>` : ""}
+          </div>
+        `;
+        document.getElementById("station-nav").innerHTML = navHTML;
 
         const lines = match.line.split(",");
         const urls = match.lineurl.split(",");
-        
         const lineHTML = lines.map((line, i) => {
           const url = urls[i];
-          const color = colors[i] || "#ccc";
-          const span = `<span class="line-color" style="background-color:${color};"></span>`;
           return url !== "none"
-            ? `<a href="${url}" class="contact-button">${span}${line}</a>`
-            : `<span class="contact-button">${span}${line}</span>`;
+            ? `<a href="${url}" class="contact-button">${colorSpan}${line}</a>`
+            : `<span class="contact-button">${colorSpan}${line}</span>`;
         }).join("<br>");
-        
         document.getElementById("line-links").innerHTML = lineHTML;
 
         const platforms = match.platform.split(",");
