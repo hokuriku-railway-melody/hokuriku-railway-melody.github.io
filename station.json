@@ -42,5 +42,30 @@
     "numsign": "A",
     "numnum": "12",
     "numtextcolor": "#ffffff"
+  },
+  {
+    "com": "test2",
+    "natcom": "テスト鉄道2",
+    "sta": "test2",
+    "natsta": "テスト駅2",
+    "up": "none",
+    "upurl": "none",
+    "down": "下りテスト",
+    "downurl": "none",
+    "line": "テスト線2",
+    "lineurl": "none",
+    "color": "#ff0000",
+    "platform": "テスト2",
+    "ad": "テスト2",
+    "sound": "テスト2",
+    "melody": "none",
+    "note": "-",
+    "image": "https://hokuriku-railway-melody.github.io/image/521_1st.png",
+    "numshape": "circle",
+    "numcolor": "#00ff00",
+    "numpaint": "edge",
+    "numsign": "B",
+    "numnum": "24",
+    "numtextcolor": "#ffffff"
   }
 ]
