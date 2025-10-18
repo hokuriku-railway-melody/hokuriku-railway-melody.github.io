@@ -109,8 +109,8 @@
         const lineHTML = lines.map((line, i) => {
           const url = urls[i];
           return url !== "none"
-            ? `<a href="${url}" class="contact-button">${colorSpan}${line}</a>`
-            : `<span class="contact-button">${colorSpan}${line}</span>`;
+            ? `<a href="${url}" class="contact-button">${line}</a>`
+            : `<span class="contact-button">${line}</span>`;
         }).join("<br>");
         
         document.getElementById("line-links").innerHTML = lineHTML;
