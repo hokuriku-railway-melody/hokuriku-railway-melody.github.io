@@ -88,42 +88,46 @@
           const textColor = match.numtextcolor;
   
           const badge = document.createElement("span");
-          badge.style.width = "48px";
-          badge.style.height = "48px";
-          badge.style.display = "inline-flex";
-          badge.style.flexDirection = "column";
-          badge.style.justifyContent = "center";
-          badge.style.alignItems = "center";
-          badge.style.fontSize = "12px";
-          badge.style.fontWeight = "bold";
-          badge.style.color = textColor;
-          badge.style.marginLeft = "0.5em";
-          badge.style.border = `2px solid ${color}`;
-          badge.style.backgroundColor = paint === "fill" ? color : "#fff";
-          if (shape === "circle") badge.style.borderRadius = "50%";
+          badge.style.cssText = `
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: ${textColor};
+            margin-left: 0.5em;
+            border: 2px solid ${color};
+            background-color: ${paint === "fill" ? color : "#fff"};
+            ${shape === "circle" ? "border-radius: 50%;" : ""}
+            vertical-align: middle;
+            text-align: center;
+          `;
   
           badge.innerHTML = sign !== "none"
-            ? `<div style="line-height:1.1;"><div>${sign}</div><div>${num}</div></div>`
-            : `<div>${num}</div>`;
+            ? `<div style="line-height:1.1; text-align:center;"><div>${sign}</div><div>${num}</div></div>`
+            : `<div style="text-align:center;">${num}</div>`;
   
           heading.appendChild(badge);
         }
   
-        const upNames = match.up?.split(",") || [];
-        const downNames = match.down?.split(",") || [];
-        const upUrls = match.upurl?.split(",") || [];
-        const downUrls = match.downurl?.split(",") || [];
+        const upNames = (match.up?.split(",") || []).filter(name => name !== "none");
+        const downNames = (match.down?.split(",") || []).filter(name => name !== "none");
+        const upUrls = (match.upurl?.split(",") || []).filter(url => url !== "none");
+        const downUrls = (match.downurl?.split(",") || []).filter(url => url !== "none");
   
         const upLinks = upNames.map((name, i) => {
           const url = upUrls[i];
-          return url !== "none"
+          return url
             ? `<a href="${url}" class="contact-button">${name}</a>`
             : `<span class="contact-button">${name}</span>`;
         }).join("・");
   
         const downLinks = downNames.map((name, i) => {
           const url = downUrls[i];
-          return url !== "none"
+          return url
             ? `<a href="${url}" class="contact-button">${name}</a>`
             : `<span class="contact-button">${name}</span>`;
         }).join("・");
