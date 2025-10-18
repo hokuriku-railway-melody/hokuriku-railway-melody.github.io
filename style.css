@@ -180,8 +180,9 @@ table tbody tr:hover {
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin-right: 0.3em;
+  margin-right: 0.4em;
   vertical-align: middle;
+  border-radius: 2px;
 }
 
 .line-link {
