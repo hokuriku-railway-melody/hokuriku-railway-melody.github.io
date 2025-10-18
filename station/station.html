@@ -63,8 +63,33 @@
     fetch("https://hokuriku-railway-melody.github.io/station.json")
       .then(res => res.json())
       .then(data => {
-        const match = data.find(item => item.com === com && item.sta === sta);
-        if (!match) return;
+        let match = data.find(item => item.com === com && item.sta === sta);
+  
+        if (!match) {
+          match = {
+            natcom: "存在しないページ：",
+            natsta: "Error 404 Not Found",
+            up: "none",
+            upurl: "none",
+            down: "none",
+            downurl: "none",
+            line: "この駅のページは存在しません。",
+            lineurl: "none",
+            color: "#000000",
+            platform: "0番のりば",
+            ad: "エラー",
+            sound: "エラー",
+            melody: "none",
+            note: "正しいURLを入力するか、更新を待ってください。",
+            image: "https://hokuriku-railway-melody.github.io/image/413.png",
+            numshape: "none",
+            numcolor: "none",
+            numpaint: "none",
+            numsign: "none",
+            numnum: "none",
+            numtextcolor: "none"
+          };
+        }
   
         document.title = `ほくりく駅メロ図鑑 | ${match.natsta}`;
         document.getElementById("favicon").href = match.image;
