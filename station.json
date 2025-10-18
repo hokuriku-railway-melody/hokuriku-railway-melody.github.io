@@ -17,5 +17,30 @@
     "melody": "none,none",
     "note": "-,-",
     "image": "https://hokuriku-railway-melody.github.io/image/e7_kagayaki.png"
+  },
+  {
+    "com": "test",
+    "natcom": "テスト鉄道",
+    "sta": "test",
+    "natsta": "テスト駅",
+    "up": "上りテスト",
+    "upurl": "none",
+    "down": "none",
+    "downurl": "none",
+    "line": "テスト線",
+    "lineurl": "none",
+    "color": "#00ff00",
+    "platform": "テスト",
+    "ad": "テスト",
+    "sound": "テスト",
+    "melody": "none",
+    "note": "-",
+    "image": "https://hokuriku-railway-melody.github.io/image/413.png",
+    "numshape": "square",
+    "numcolor": "#0000ff",
+    "numpaint": "fill",
+    "numsign": "A",
+    "numnum": "12",
+    "numtextcolor": "#ffffff"
   }
 ]
