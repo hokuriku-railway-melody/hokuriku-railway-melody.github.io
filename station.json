@@ -11,11 +11,11 @@
     "line": "上越新幹線,信越本線,白新線,越後線",
     "lineurl": "https://hokuriku-railway-melody.github.io/line/jreast/joetsu_shinkansen/,https://hokuriku-railway-melody.github.io/line/jreast/shinetsu/,none,https://hokuriku-railway-melody.github.io/line/jreast/echigo/",
     "color": "#008313,#3fabe4,#f187b7,#3c9650",
-    "platform": "1番線,2番線,3番線,4番線,5番線,11番線,12番線,13番線,14番線",
-    "ad": "発車,発車,発車,発車,発車,発車,発車,発車,発車",
-    "sound": "冬,冬,冬,冬,冬,ベル,ベル,ベル,ベル",
-    "melody": "none,none,none,none,none,none,none,none,none",
-    "note": "-,-,-,-,-,-,-,-,-",
+    "platform": "1～5番線,11～14番線",
+    "ad": "発車,発車",
+    "sound": "冬,ベル",
+    "melody": "none,none",
+    "note": "-,-",
     "image": "https://hokuriku-railway-melody.github.io/image/e7_kagayaki.png"
   }
 ]
