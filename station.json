@@ -16,7 +16,13 @@
     "sound": "冬,ベル",
     "melody": "none,none",
     "note": "-,-",
-    "image": "https://hokuriku-railway-melody.github.io/image/e7_kagayaki.png"
+    "image": "https://hokuriku-railway-melody.github.io/image/e7_kagayaki.png",
+    "numshape": "none",
+    "numcolor": "none",
+    "numpaint": "none",
+    "numsign": "none",
+    "numnum": "none",
+    "numtextcolor": "none"
   },
   {
     "com": "test",
