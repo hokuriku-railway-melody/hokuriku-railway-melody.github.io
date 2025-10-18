@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:url" content="https://hokuriku-railway-melody.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="twitter:url" content="https://hokuriku-railway-melody.github.io/">
+
+  <title>ほくりく駅メロ図鑑 | 浅野川線</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/03.png">
+  <link rel="canonical" href="https://hokuriku-railway-melody.github.io/">
+</head>
+<body>
+  <header>
+    <h1><img src="https://hokuriku-railway-melody.github.io/image/03.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>浅野川線</h2>
+        <p>浅野川線の駅の一覧です。</p>
+      </section>
+      <section>
+        <h2>路線</h2>
+        <img src="https://hokuriku-railway-melody.github.io/image/kbhfa.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=hokutetsu-kanazawa" class="contact-button" style="position: relative; top: -1em;">北鉄金沢駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=nanatsuya" class="contact-button" style="position: relative; top: -1em;">七ツ屋駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=kamimoroe" class="contact-button" style="position: relative; top: -1em;">上諸江駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=isobe" class="contact-button" style="position: relative; top: -1em;">磯部</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=waridashi" class="contact-button" style="position: relative; top: -1em;">割出駅（浅野川中学校前）</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=mitsukuchi" class="contact-button" style="position: relative; top: -1em;">三口駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=mitsuya" class="contact-button" style="position: relative; top: -1em;">三ツ屋駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=okobata" class="contact-button" style="position: relative; top: -1em;">大河端駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=kitama" class="contact-button" style="position: relative; top: -1em;">北間駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=kagatsume" class="contact-button" style="position: relative; top: -1em;">蚊爪駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=awagasaki" class="contact-button" style="position: relative; top: -1em;">粟ヶ崎駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/kbhfe.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=hokuriku&sta=uchinada" class="contact-button" style="position: relative; top: -1em;">内灘駅</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
