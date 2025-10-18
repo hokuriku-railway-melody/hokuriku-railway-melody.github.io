@@ -102,11 +102,9 @@
           </div>
         `;
         document.getElementById("station-nav").innerHTML = navHTML;
-
+        
         const lines = match.line.split(",");
         const urls = match.lineurl.split(",");
-        
-        const colorSpan = `<span class="line-color" style="background: linear-gradient(to bottom, ${segments});"></span>`;
         
         const lineHTML = lines.map((line, i) => {
           const url = urls[i];
