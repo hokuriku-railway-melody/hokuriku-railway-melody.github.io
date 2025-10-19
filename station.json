@@ -26,9 +26,11 @@
     "numshape": "none",
     "numcolor": "none",
     "numpaint": "none",
+    "numcolorarea": "none",
     "numsign": "none",
     "numnum": "none",
-    "numtextcolor": "none"
+    "numsigncolor": "none",
+    "numnumcolor": "none"
   },
   {
     "__comment__": "********************上越幹********************"
@@ -126,9 +128,11 @@
     "numshape": "square",
     "numcolor": "#0000ff",
     "numpaint": "fill",
+    "numcolorarea": "none",
     "numsign": "A",
     "numnum": "12",
-    "numtextcolor": "#ffffff"
+    "numsigncolor": "#ffffff",
+    "numnumcolor": "#ffffff"
   },
   {
     "com": "test2",
@@ -151,8 +155,37 @@
     "numshape": "circle",
     "numcolor": "#00ff00",
     "numpaint": "edge",
+    "numcolorarea": "none",
     "numsign": "B",
     "numnum": "24",
-    "numtextcolor": "#000000"
+    "numsigncolor": "#000000",
+    "numnumcolor": "#000000"
+  },
+  {
+    "com": "test3",
+    "natcom": "テスト鉄道3",
+    "sta": "test3",
+    "natsta": "テスト駅3",
+    "up": "上りテスト",
+    "upurl": "none",
+    "down": "下りテスト",
+    "downurl": "none",
+    "line": "テスト線3",
+    "lineurl": "none",
+    "color": "#0000ff",
+    "platform": "テスト3",
+    "ad": "テスト3",
+    "sound": "テスト3",
+    "melody": "none",
+    "note": "-",
+    "image": "https://hokuriku-railway-melody.github.io/image/２２¥¥225.png",
+    "numshape": "square",
+    "numcolor": "#ff0000",
+    "numpaint": "edge",
+    "numcolorarea": "top",
+    "numsign": "CA",
+    "numnum": "83",
+    "numsigncolor": "#000000",
+    "numnumcolor": "#000000"
   }
 ]
