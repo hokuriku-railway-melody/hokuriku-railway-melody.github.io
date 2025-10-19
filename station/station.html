@@ -107,14 +107,15 @@
   
         heading.innerHTML = `${colorSpan}${match.natcom} ${match.natsta}`;
   
-        const sign = match.numsign || "none";
-        const num = match.numnum || "none";
+        const sign = match.numsign !== "none" ? match.numsign : "";
+        const num = match.numnum !== "none" ? match.numnum : "";
+  
         if (
           match.numshape !== "none" &&
           match.numcolor !== "none" &&
           match.numpaint !== "none" &&
-          num !== "none" &&
-          match.numtextcolor !== "none"
+          match.numtextcolor !== "none" &&
+          (sign || num)
         ) {
           const shape = match.numshape;
           const color = match.numcolor;
@@ -128,7 +129,6 @@
           badge.style.flexDirection = "column";
           badge.style.justifyContent = "center";
           badge.style.alignItems = "center";
-          badge.style.fontSize = "20px";
           badge.style.fontWeight = "bold";
           badge.style.color = textColor;
           badge.style.marginLeft = "0.5em";
@@ -138,9 +138,13 @@
           badge.style.textAlign = "center";
           if (shape === "circle") badge.style.borderRadius = "50%";
   
-          badge.innerHTML = sign !== "none"
-            ? `<div style="line-height:1.1; text-align:center;"><div>${sign}</div><div>${num}</div></div>`
-            : `<div style="text-align:center;">${num}</div>`;
+          if (sign && num) {
+            badge.style.fontSize = "20px";
+            badge.innerHTML = `<div style="line-height:1.1; text-align:center;"><div>${sign}</div><div>${num}</div></div>`;
+          } else {
+            badge.style.fontSize = "40px";
+            badge.innerHTML = `<div style="text-align:center;">${sign || num}</div>`;
+          }
   
           heading.appendChild(badge);
         }
