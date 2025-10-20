@@ -100,19 +100,17 @@ footer {
   border-top: 1px solid #ddd;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 .notice-text {
-  width: 40ch;
-  background-color: #000;
-  color: inherit;
-  font-weight: bold;
+  font-family: 'DotGothic16', sans-serif;
   font-size: 1em;
-  font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
-  letter-spacing: 0.15em;
+  font-weight: normal;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5em;
   white-space: nowrap;
   display: inline-block;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 0.5em;
 }
 
 .contact-button {
