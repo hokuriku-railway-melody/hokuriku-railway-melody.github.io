@@ -218,15 +218,19 @@
 
         const transfers = match.transfer?.split(",") || [];
         const transferUrls = match.transferurl?.split(",") || [];
-
-        const transferHTML = transfers.map((name, i) => {
-          const url = transferUrls[i];
-          return url !== "none"
-            ? `<a href="${url}" class="contact-button">${name}</a>`
-            : `<span class="contact-button">${name}</span>`;
-        }).join("<br>");
-
-        document.getElementById("transfer-links").innerHTML = transferHTML;
+        
+        const validTransfers = transfers
+          .map((name, i) => {
+            const url = transferUrls[i];
+            if (name === "none" || url === "none") return null;
+            return `<a href="${url}" class="contact-button">${name}</a>`;
+          })
+          .filter(Boolean);
+        
+        if (validTransfers.length > 0) {
+          const transferHTML = validTransfers.join("<br>");
+          document.getElementById("transfer-links").innerHTML = transferHTML;
+        }
         
         const platforms = match.platform.split(",");
         const ads = match.ad.split(",");
