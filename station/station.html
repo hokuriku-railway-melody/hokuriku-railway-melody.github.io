@@ -219,16 +219,16 @@
         const transfers = match.transfer?.split(",") || [];
         const transferUrls = match.transferurl?.split(",") || [];
         
-        const validTransfers = transfers
+        const transferHTML = transfers
           .map((name, i) => {
             const url = transferUrls[i];
-            if (name === "none" || url === "none") return null;
+            if (!name || name === "none" || !url || url === "none") return null;
             return `<a href="${url}" class="contact-button">${name}</a>`;
           })
-          .filter(Boolean);
+          .filter(Boolean)
+          .join("<br>");
         
-        if (validTransfers.length > 0) {
-          const transferHTML = validTransfers.join("<br>");
+        if (transferHTML) {
           document.getElementById("transfer-links").innerHTML = transferHTML;
         }
         
