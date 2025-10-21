@@ -39,6 +39,7 @@
       <section>
         <h2>乗換駅・路線</h2>
         <div id="line-links"></div>
+        <div id="transfer-links"></div>
       </section>
       <div class="spacer"></div>
       <section>
@@ -214,7 +215,19 @@
             : `<span class="contact-button">${line}</span>`;
         }).join("<br>");
         document.getElementById("line-links").innerHTML = lineHTML;
-  
+
+        const transfers = match.transfer?.split(",") || [];
+        const transferUrls = match.transferurl?.split(",") || [];
+
+        const transferHTML = transfers.map((name, i) => {
+          const url = transferUrls[i];
+          return url !== "none"
+            ? `<a href="${url}" class="contact-button">${name}</a>`
+            : `<span class="contact-button">${name}</span>`;
+        }).join("<br>");
+
+        document.getElementById("transfer-links").innerHTML = transferHTML;
+        
         const platforms = match.platform.split(",");
         const ads = match.ad.split(",");
         const sounds = match.sound.split(",");
