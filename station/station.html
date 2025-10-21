@@ -261,42 +261,46 @@
           if (melodies[i] !== "none") {
             const audio = document.createElement("audio");
             audio.src = melodies[i];
-            audio.preload = "metadata"; // 再生時間取得のため
+            audio.preload = "metadata";
+            audio.style.display = "none";
           
-            const playButton = document.createElement("button");
-            playButton.textContent = "▶";
-            playButton.className = "melody-button";
+            const playLink = document.createElement("a");
+            playLink.textContent = "▶";
+            playLink.id = "contact-button-square";
+            playLink.style.cursor = "pointer";
           
-            const stopButton = document.createElement("button");
-            stopButton.textContent = "■";
-            stopButton.className = "melody-button";
+            const stopLink = document.createElement("a");
+            stopLink.textContent = "■";
+            stopLink.id = "contact-button-square";
+            stopLink.style.cursor = "pointer";
+            stopLink.style.marginLeft = "0.5em";
           
             const timeDisplay = document.createElement("span");
             timeDisplay.textContent = "0:00/0:00";
             timeDisplay.style.marginLeft = "0.5em";
           
-            playButton.onclick = () => {
+            playLink.onclick = () => {
               audio.play();
             };
           
-            stopButton.onclick = () => {
+            stopLink.onclick = () => {
               audio.pause();
               audio.currentTime = 0;
+              updateTimeDisplay();
             };
           
-            audio.addEventListener("timeupdate", () => {
+            function updateTimeDisplay() {
               const current = formatTime(audio.currentTime);
-              const total = formatTime(audio.duration);
+              const total = formatTime(audio.duration || 0);
               timeDisplay.textContent = `${current}/${total}`;
-            });
+            }
           
-            audio.addEventListener("loadedmetadata", () => {
-              const total = formatTime(audio.duration);
-              timeDisplay.textContent = `0:00/${total}`;
-            });
+            audio.addEventListener("timeupdate", updateTimeDisplay);
           
-            td2.appendChild(playButton);
-            td2.appendChild(stopButton);
+            audio.addEventListener("loadedmetadata", updateTimeDisplay);
+          
+            td2.appendChild(playLink);
+            td2.appendChild(stopLink);
             td2.appendChild(timeDisplay);
             td2.appendChild(audio);
           } else {
