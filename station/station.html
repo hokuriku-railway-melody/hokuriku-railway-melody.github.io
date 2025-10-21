@@ -309,7 +309,7 @@
           tr.appendChild(td2);
   
           const td3 = document.createElement("td");
-          td3.textContent = notes[i] || "-";
+          td3.textContent = (!notes[i] || notes[i] === "none") ? "なし" : notes[i];
           tr.appendChild(td3);
   
           tbody.appendChild(tr);
