@@ -257,10 +257,47 @@
           tr.appendChild(td1);
   
           const td2 = document.createElement("td");
+          
           if (melodies[i] !== "none") {
             const audio = document.createElement("audio");
-            audio.controls = true;
             audio.src = melodies[i];
+            audio.preload = "metadata"; // 再生時間取得のため
+          
+            const playButton = document.createElement("button");
+            playButton.textContent = "▶";
+            playButton.className = "melody-button";
+          
+            const stopButton = document.createElement("button");
+            stopButton.textContent = "■";
+            stopButton.className = "melody-button";
+          
+            const timeDisplay = document.createElement("span");
+            timeDisplay.textContent = "0:00/0:00";
+            timeDisplay.style.marginLeft = "0.5em";
+          
+            playButton.onclick = () => {
+              audio.play();
+            };
+          
+            stopButton.onclick = () => {
+              audio.pause();
+              audio.currentTime = 0;
+            };
+          
+            audio.addEventListener("timeupdate", () => {
+              const current = formatTime(audio.currentTime);
+              const total = formatTime(audio.duration);
+              timeDisplay.textContent = `${current}/${total}`;
+            });
+          
+            audio.addEventListener("loadedmetadata", () => {
+              const total = formatTime(audio.duration);
+              timeDisplay.textContent = `0:00/${total}`;
+            });
+          
+            td2.appendChild(playButton);
+            td2.appendChild(stopButton);
+            td2.appendChild(timeDisplay);
             td2.appendChild(audio);
           } else {
             td2.textContent = "なし";
