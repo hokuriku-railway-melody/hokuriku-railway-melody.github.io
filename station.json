@@ -124,7 +124,7 @@
     "platform": "テスト",
     "ad": "テスト",
     "sound": "テスト",
-    "melody": "none",
+    "melody": "https://hokuriku-railway-melody.github.io/melody/file/jrwest_takayama_nishi-toyama_1.wav",
     "note": "-",
     "image": "https://hokuriku-railway-melody.github.io/image/413.png",
     "numshape": "square",
