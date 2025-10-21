@@ -30,7 +30,9 @@
     "numsign": "none",
     "numnum": "none",
     "numsigncolor": "none",
-    "numnumcolor": "none"
+    "numnumcolor": "none",
+    "transfer": "none",
+    "transferurl": "none"
   },
   {
     "__comment__": "********************上越幹********************"
@@ -132,7 +134,9 @@
     "numsign": "A",
     "numnum": "12",
     "numsigncolor": "#ffffff",
-    "numnumcolor": "#ffffff"
+    "numnumcolor": "#ffffff",
+    "transfer": "test2,test3",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
   },
   {
     "com": "test2",
@@ -159,7 +163,9 @@
     "numsign": "B",
     "numnum": "24",
     "numsigncolor": "#000000",
-    "numnumcolor": "#000000"
+    "numnumcolor": "#000000",
+    "transfer": "test,test3",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
   },
   {
     "com": "test3",
@@ -186,6 +192,8 @@
     "numsign": "CA",
     "numnum": "83",
     "numsigncolor": "#000000",
-    "numnumcolor": "#000000"
+    "numnumcolor": "#000000",
+    "transfer": "test2,test3",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2"
   }
 ]
