@@ -56,5 +56,36 @@
         menu.appendChild(ul);
       });
   </script>
+
+  <script>
+  (function() {
+    const base = "https://hokuriku-railway-melody.github.io";
+    const path = location.pathname;
+    const segments = path.split("/").filter(Boolean);
+    const isIndex = segments.at(-1) === "index.html";
+  
+    const canonicalUrl = isIndex
+      ? `${base}/${segments.at(-2)}/`
+      : `${base}/${segments.at(-1)}`;
+  
+    const setMeta = (property, content) => {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      meta.setAttribute("content", content);
+      document.head.appendChild(meta);
+    };
+  
+    const setLinkCanonical = (href) => {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      link.setAttribute("href", href);
+      document.head.appendChild(link);
+    };
+  
+    setMeta("og:url", canonicalUrl);
+    setMeta("twitter:url", canonicalUrl);
+    setLinkCanonical(canonicalUrl);
+  })();
+  </script>
 </body>
 </html>
