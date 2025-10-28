@@ -53,6 +53,20 @@
               <td class="melody-cell">https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/35b2dab0_jr-west_takayama_nishi-toyama_1_approach.wav</td>
               <td>-</td>
             </tr>
+            <tr>
+              <th>メリーさんのひつじ</th>
+              <th>JR西日本高山本線婦中鵜坂駅</th>
+              <td>JR西日本高山本線西富山駅2番のりば、婦中鵜坂駅、越中八尾駅1番のりば</td>
+              <td class="melody-cell">https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/6c9e7438_jr-west_takayama_fuchu-usaka_approach.wav</td>
+              <td>一部カット編集</td>
+            </tr>
+            <tr>
+              <th>線路は続くよどこまでも</th>
+              <th>JR西日本高山本線猪谷駅</th>
+              <td>JR西日本高山本線猪谷駅、七尾線中津幡駅、本津幡駅、能勢駅、横山駅、高松駅、免田駅、宝達駅、敷浪駅、南羽咋駅、千路駅、徳田駅</td>
+              <td class="melody-cell">https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/e0892f18_jr-west_takayama_inotani_approach.wav</td>
+              <td>非密着</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -71,52 +85,65 @@
     }
     
     document.querySelectorAll(".melody-cell").forEach(td => {
-      const url = td.textContent.trim();
-      td.textContent = ""; // 中身を消してUIを入れる
+      const rawHtml = td.innerHTML.trim();
+      td.innerHTML = ""; // UIを入れるために初期化
     
-      if (url === "none" || url === "") {
+      // <br>で分割してURL配列に
+      const urlList = rawHtml
+        .split(/<br\s*\/?>/i)
+        .map(s => s.trim())
+        .filter(s => s && s !== "none");
+    
+      if (urlList.length === 0) {
         td.textContent = "なし";
         return;
       }
     
-      const audio = document.createElement("audio");
-      audio.src = url;
-      audio.preload = "metadata";
-      audio.style.display = "none";
+      urlList.forEach((url, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.style.marginBottom = "0.5em";
     
-      const playLink = document.createElement("a");
-      playLink.textContent = "▶";
-      playLink.style.cursor = "pointer";
+        const audio = document.createElement("audio");
+        audio.src = url;
+        audio.preload = "metadata";
+        audio.style.display = "none";
     
-      const stopLink = document.createElement("a");
-      stopLink.textContent = "■";
-      stopLink.style.cursor = "pointer";
-      stopLink.style.marginLeft = "0.5em";
+        const playLink = document.createElement("a");
+        playLink.textContent = `▶${index + 1}`;
+        playLink.style.cursor = "pointer";
     
-      const timeDisplay = document.createElement("span");
-      timeDisplay.textContent = "0:00/0:00";
-      timeDisplay.style.marginLeft = "0.5em";
+        const stopLink = document.createElement("a");
+        stopLink.textContent = "■";
+        stopLink.style.cursor = "pointer";
+        stopLink.style.marginLeft = "0.5em";
     
-      playLink.onclick = () => audio.play();
-      stopLink.onclick = () => {
-        audio.pause();
-        audio.currentTime = 0;
-        updateTimeDisplay();
-      };
+        const timeDisplay = document.createElement("span");
+        timeDisplay.textContent = "0:00/0:00";
+        timeDisplay.style.marginLeft = "0.5em";
     
-      function updateTimeDisplay() {
-        const current = formatTime(audio.currentTime);
-        const total = formatTime(audio.duration || 0);
-        timeDisplay.textContent = `${current}/${total}`;
-      }
+        playLink.onclick = () => audio.play();
+        stopLink.onclick = () => {
+          audio.pause();
+          audio.currentTime = 0;
+          updateTimeDisplay();
+        };
     
-      audio.addEventListener("timeupdate", updateTimeDisplay);
-      audio.addEventListener("loadedmetadata", updateTimeDisplay);
+        function updateTimeDisplay() {
+          const current = formatTime(audio.currentTime);
+          const total = formatTime(audio.duration || 0);
+          timeDisplay.textContent = `${current}/${total}`;
+        }
     
-      td.appendChild(playLink);
-      td.appendChild(stopLink);
-      td.appendChild(timeDisplay);
-      td.appendChild(audio);
+        audio.addEventListener("timeupdate", updateTimeDisplay);
+        audio.addEventListener("loadedmetadata", updateTimeDisplay);
+    
+        wrapper.appendChild(playLink);
+        wrapper.appendChild(stopLink);
+        wrapper.appendChild(timeDisplay);
+        wrapper.appendChild(audio);
+    
+        td.appendChild(wrapper);
+      });
     });
   </script>
   
