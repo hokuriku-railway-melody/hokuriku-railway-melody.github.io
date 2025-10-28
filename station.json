@@ -79,8 +79,8 @@
     "numnum": "none",
     "numsigncolor": "none",
     "numnumcolor": "none",
-    "transfer": "none",
-    "transferurl": "none"
+    "transfer": "電鉄富山駅,富山駅停留場,電鉄富山駅・エスタ前停留場",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=toyama-station,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama-station-esta-mae"
   },
   {
     "__comment__": "********************高山********************"
