@@ -64,6 +64,63 @@
   </footer>
 
   <script>
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s.toString().padStart(2, "0")}`;
+    }
+    
+    document.querySelectorAll(".melody-cell").forEach(td => {
+      const url = td.textContent.trim();
+      td.textContent = ""; // 中身を消してUIを入れる
+    
+      if (url === "none" || url === "") {
+        td.textContent = "なし";
+        return;
+      }
+    
+      const audio = document.createElement("audio");
+      audio.src = url;
+      audio.preload = "metadata";
+      audio.style.display = "none";
+    
+      const playLink = document.createElement("a");
+      playLink.textContent = "▶";
+      playLink.style.cursor = "pointer";
+    
+      const stopLink = document.createElement("a");
+      stopLink.textContent = "■";
+      stopLink.style.cursor = "pointer";
+      stopLink.style.marginLeft = "0.5em";
+    
+      const timeDisplay = document.createElement("span");
+      timeDisplay.textContent = "0:00/0:00";
+      timeDisplay.style.marginLeft = "0.5em";
+    
+      playLink.onclick = () => audio.play();
+      stopLink.onclick = () => {
+        audio.pause();
+        audio.currentTime = 0;
+        updateTimeDisplay();
+      };
+    
+      function updateTimeDisplay() {
+        const current = formatTime(audio.currentTime);
+        const total = formatTime(audio.duration || 0);
+        timeDisplay.textContent = `${current}/${total}`;
+      }
+    
+      audio.addEventListener("timeupdate", updateTimeDisplay);
+      audio.addEventListener("loadedmetadata", updateTimeDisplay);
+    
+      td.appendChild(playLink);
+      td.appendChild(stopLink);
+      td.appendChild(timeDisplay);
+      td.appendChild(audio);
+    });
+  </script>
+  
+  <script>
     fetch('https://hokuriku-railway-melody.github.io/menu.json')
       .then(res => res.json())
       .then(data => {
