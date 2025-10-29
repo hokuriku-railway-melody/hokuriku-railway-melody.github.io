@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 富山地方鉄道</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/de9000_black.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokuriku-railway-melody.github.io/" style="color: white;"><img src="https://hokuriku-railway-melody.github.io/image/de9000_black.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>富山地方鉄道路線一覧</h2>
+        <p>富山地方鉄道の路線の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+      <h2>路線</h2>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyamako/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/tlr0600.png" alt="鉄道車両画像"> 富山港線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyama-city-tram-main/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/de9000_white.png" alt="鉄道車両画像"> 富山軌道線本線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyama-city-tram-branch/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/t100.png" alt="鉄道車両画像"> 富山軌道線支線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyama-city-tram-yasunoya/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/de8000.png" alt="鉄道車両画像"> 富山軌道線安野屋線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyama-city-tram-kureha/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/de7000_pato.png" alt="鉄道車両画像"> 富山軌道線呉羽線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/toyama-city-tram-toyama-toshin/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/de9000_black.png" alt="鉄道車両画像"> 富山軌道線富山都心線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/fujikoshi/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/14760.png" alt="鉄道車両画像"> 不二越線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/kamidaki/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/10030.png" alt="鉄道車両画像"> 上滝線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/main/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/20020.png" alt="鉄道車両画像"> 本線</a>
+        <a href="https://hokuriku-railway-melody.github.io/line/toyama-chiho/tateyama/" class="contact-button"><img src="https://hokuriku-railway-melody.github.io/image/16010.png" alt="鉄道車両画像"> 立山線</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
