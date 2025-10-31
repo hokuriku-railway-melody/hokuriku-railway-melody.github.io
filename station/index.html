@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 駅から選ぶ</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/ed81_twilightexpress.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokuriku-railway-melody.github.io/" style="color: white;"><img src="https://hokuriku-railway-melody.github.io/image/ed81_twilightexpress.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>駅から選ぶ</h2>
+        <p>ほくりく駅メロ図鑑で掲載している駅の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>会社</h2>
+        
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    function formatTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s.toString().padStart(2, "0")}`;
+    }
+    
+    document.querySelectorAll(".melody-cell").forEach(td => {
+      const rawHtml = td.innerHTML.trim();
+      td.innerHTML = ""; // UIを入れるために初期化
+    
+      // <br>で分割してURL配列に
+      const urlList = rawHtml
+        .split(/<br\s*\/?>/i)
+        .map(s => s.trim())
+        .filter(s => s && s !== "none");
+    
+      if (urlList.length === 0) {
+        td.textContent = "なし";
+        return;
+      }
+    
+      urlList.forEach((url, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.style.marginBottom = "0.5em";
+    
+        const audio = document.createElement("audio");
+        audio.src = url;
+        audio.preload = "metadata";
+        audio.style.display = "none";
+    
+        const playLink = document.createElement("a");
+        playLink.textContent = `▶${index + 1}`;
+        playLink.style.cursor = "pointer";
+    
+        const stopLink = document.createElement("a");
+        stopLink.textContent = "■";
+        stopLink.style.cursor = "pointer";
+        stopLink.style.marginLeft = "0.5em";
+    
+        const timeDisplay = document.createElement("span");
+        timeDisplay.textContent = "0:00/0:00";
+        timeDisplay.style.marginLeft = "0.5em";
+    
+        playLink.onclick = () => audio.play();
+        stopLink.onclick = () => {
+          audio.pause();
+          audio.currentTime = 0;
+          updateTimeDisplay();
+        };
+    
+        function updateTimeDisplay() {
+          const current = formatTime(audio.currentTime);
+          const total = formatTime(audio.duration || 0);
+          timeDisplay.textContent = `${current}/${total}`;
+        }
+    
+        audio.addEventListener("timeupdate", updateTimeDisplay);
+        audio.addEventListener("loadedmetadata", updateTimeDisplay);
+    
+        wrapper.appendChild(playLink);
+        wrapper.appendChild(stopLink);
+        wrapper.appendChild(timeDisplay);
+        wrapper.appendChild(audio);
+    
+        td.appendChild(wrapper);
+      });
+    });
+  </script>
+  
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
