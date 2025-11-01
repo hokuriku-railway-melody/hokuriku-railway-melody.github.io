@@ -207,8 +207,8 @@
     "numnum": "12",
     "numsigncolor": "#ffffff",
     "numnumcolor": "#ffffff",
-    "transfer": "test2,test3",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
+    "transfer": "test2,test3,test4",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
   },
   {
     "com": "test2",
@@ -236,8 +236,8 @@
     "numnum": "24",
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
-    "transfer": "test,test3",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
+    "transfer": "test,test3,test4",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
   },
   {
     "com": "test3",
@@ -256,7 +256,7 @@
     "sound": "テスト3",
     "melody": "none",
     "note": "none",
-    "image": "https://hokuriku-railway-melody.github.io/image/２２¥¥225.png",
+    "image": "https://hokuriku-railway-melody.github.io/image/225.png",
     "numshape": "square",
     "numcolor": "#ff0000",
     "numpaint": "edge",
@@ -265,7 +265,36 @@
     "numnum": "83",
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
-    "transfer": "test2,test3",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2"
+    "transfer": "test,test2,test4",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
+  },
+  {
+    "com": "test4",
+    "natcom": "テスト鉄道4",
+    "sta": "test4",
+    "natsta": "テスト駅4",
+    "up": "上りテスト",
+    "upurl": "none",
+    "down": "下りテスト",
+    "downurl": "none",
+    "line": "テスト線4",
+    "lineurl": "none",
+    "color": "#00ffff",
+    "platform": "テスト4",
+    "ad": "テスト4",
+    "sound": "テスト4",
+    "melody": "none",
+    "note": "none",
+    "image": "https://hokuriku-railway-melody.github.io/image/10030.png",
+    "numshape": "square",
+    "numcolor": "#ffff00",
+    "numpaint": "edge",
+    "numcolorarea": "none",
+    "numsign": "T",
+    "numnum": "none",
+    "numsigncolor": "#000000",
+    "numnumcolor": "#000000",
+    "transfer": "test,test2,test3",
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
   }
 ]
