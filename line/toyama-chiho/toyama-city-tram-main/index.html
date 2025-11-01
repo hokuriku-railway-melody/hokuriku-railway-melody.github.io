@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 富山軌道線本線</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/de9000_white.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokuriku-railway-melody.github.io/" style="color: white;"><img src="https://hokuriku-railway-melody.github.io/image/de9000_white.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>富山軌道線本線 <span style="width: 48px; height: 48px; display: inline-block; position: relative; font-weight: bold; margin-left: 0.5em; border: 2px solid #269f35; vertical-align: middle; text-align: center; border-radius: 50%; background-color: #ffffff;"><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 40px;"><div style="color:#000000">C</div></div></span></h2>
+        <p>富山軌道線本線の駅の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>路線</h2>
+        <img src="https://hokuriku-railway-melody.github.io/image/kbhfa.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=000" class="contact-button" style="position: relative; top: -1em;">000</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
