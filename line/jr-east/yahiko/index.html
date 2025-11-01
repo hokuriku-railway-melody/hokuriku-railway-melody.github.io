@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 弥彦線</title>
+  <link rel="stylesheet" href="https://hokuriku-railway-melody.github.io/style.css">
+  <link rel="icon" href="https://hokuriku-railway-melody.github.io/image/e129.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokuriku-railway-melody.github.io/" style="color: white;"><img src="https://hokuriku-railway-melody.github.io/image/e129.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>弥彦線</h2>
+        <p>弥彦線の駅の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>路線</h2>
+        <img src="https://hokuriku-railway-melody.github.io/image/kbhfa.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=yahiko" class="contact-button" style="position: relative; top: -1em;">弥彦駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=yahagi" class="contact-button" style="position: relative; top: -1em;">矢作駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/abzgpr.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/line/jr-east/echigo/" class="contact-button" style="position: relative; top: -1em; font-size: 0.7em;">越後線</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=yoshida" class="contact-button" style="position: relative; top: -1em;">吉田駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/abzgl.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/line/jr-east/echigo/" class="contact-button" style="position: relative; top: -1em; font-size: 0.7em;">越後線</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=nishi-tsubame" class="contact-button" style="position: relative; top: -1em;">西燕駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=tsubame" class="contact-button" style="position: relative; top: -1em;">燕駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=tsubamesanjo" class="contact-button" style="position: relative; top: -1em;">燕三条駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=kita-sanjo" class="contact-button" style="position: relative; top: -1em;">北三条駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/abzgpr.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/line/jr-east/shinetsu/" class="contact-button" style="position: relative; top: -1em; font-size: 0.7em;">信越本線</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/station/station.html?com=jr-east&com=higashi-sanjo" class="contact-button" style="position: relative; top: -1em;">東三条駅</a>
+        <br>
+        <img src="https://hokuriku-railway-melody.github.io/image/str.png" alt="路線表示画像"><a href="https://hokuriku-railway-melody.github.io/line/jr-east/shinetsu/" class="contact-button" style="position: relative; top: -1em; font-size: 0.7em;">信越本線</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriku-railway-melody.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
