@@ -137,7 +137,8 @@
     "numsigncolor": "none",
     "numnumcolor": "none",
     "transfer": "電鉄富山駅,富山駅停留場,電鉄富山駅・エスタ前停留場",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=toyama-station,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama-station-esta-mae"
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=toyama-station,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama-station-esta-mae",
+    "gallery": "none"
   },
   {
     "__comment__": "********************高山********************"
@@ -208,7 +209,8 @@
     "numsigncolor": "#ffffff",
     "numnumcolor": "#ffffff",
     "transfer": "test2,test3,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "gallery": "none"
   },
   {
     "com": "test2",
@@ -237,7 +239,8 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test3,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "gallery": "none"
   },
   {
     "com": "test3",
@@ -266,7 +269,8 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test2,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4"
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "gallery": "none"
   },
   {
     "com": "test4",
@@ -295,6 +299,7 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test2,test3",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3"
+    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3",
+    "gallery": "none"
   }
 ]
