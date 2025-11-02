@@ -58,6 +58,11 @@
           <tbody id="station-table-body"></tbody>
         </table>
       </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>ギャラリー</h2>
+        <div id="gallery"></div>
+      </section>
     </main>
   </div>
 
@@ -321,6 +326,29 @@
           tr.appendChild(td3);
   
           tbody.appendChild(tr);
+
+        const galleryDiv = document.getElementById("gallery");
+        galleryDiv.innerHTML = "";
+
+        const galleryData = match.gallery || "none";
+
+        if (galleryData === "none") {
+          const link = document.createElement("a");
+          link.href = "https://forms.gle/iGUxiCi1Q9uHKSV5A";
+          link.className = "contact-button-round";
+          link.textContent = "鉄道写真を提供する";
+          galleryDiv.appendChild(link);
+        } else {
+          const urls = galleryData.split(",").map(url => url.trim()).filter(url => url !== "");
+          urls.forEach(url => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "駅写真";
+            img.style.maxWidth = "100%";
+            img.style.height = "auto";
+            img.style.margin = "0.5em 0";
+            galleryDiv.appendChild(img);
+          });
         }
       });
   
