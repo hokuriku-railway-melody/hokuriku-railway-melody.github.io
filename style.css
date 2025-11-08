@@ -92,17 +92,17 @@ main ul {
 }
 
 footer {
-  background-color: #f0f0f0;
+  background-color: #00a7e3;
   text-align: center;
   padding: 1em;
   font-size: 0.9em;
-  color: #666;
-  border-top: 1px solid #ddd;
+  color: #666666;
+  border-top: 1px solid #dddddd;
 }
 
 .notice-text {
   width: 40ch;
-  background-color: #000;
+  background-color: #000000;
   color: inherit;
   font-weight: bold;
   font-size: 1em;
@@ -118,7 +118,7 @@ footer {
 .contact-button {
   display: inline-block;
   background-color: #00a7e3;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1em;
   padding: 0.6em 1.2em;
@@ -148,7 +148,7 @@ footer {
   width: 80px;
   height: 80px;
   background-color: #00a7e3;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-size: 0.9em;
   border-radius: 6px;
@@ -175,7 +175,7 @@ footer {
 .contact-button-round {
   display: inline-block;
   background-color: #00a7e3;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1em;
   padding: 0.6em 1.6em;
@@ -212,7 +212,7 @@ table {
   margin-top: 1.5em;
   font-family: "Segoe UI", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
-  color: #333;
+  color: #333333;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
