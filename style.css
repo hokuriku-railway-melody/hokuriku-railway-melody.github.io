@@ -7,7 +7,7 @@
 3c4549  :  文字色2-微濃グレー
 ffffff  :  バックグラウンド
 c6cccf  :  テーブルボーダー
-f0f0f0  :  th濃
+f0f0f0  :  th濃兼テーブルホバー
 f4f6f8  :  th薄
 3cbceb  :  hover
 f1f9fd  :  メニュー
@@ -268,7 +268,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr:hover {
-  background-color: #3cbceb;
+  background-color: #f0f0f0;
 }
 
 .line-color {
