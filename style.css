@@ -1,8 +1,37 @@
+/*
+色は以下で統一
+【基本】
+00a7e3  :  色1-水色
+0062b2  :  色2-青
+49585f  :  文字色1-微薄グレー
+3c4549  :  文字色2-微濃グレー
+ffffff  :  バックグラウンド
+c6cccf  :  テーブルボーダー
+f0f0f0  :  th濃
+f4f6f8  :  th薄
+3cbceb  :  hover
+f1f9fd  :  メニュー
+【原色】
+d93232  :  red
+3cbceb  :  blue
+f18a2b  :  orange
+189e13  :  green
+e8351b  :  star
+【ニュース】
+6b8c3a  :  お知らせ
+c24644  :  重要
+9f8a38  :  イベント
+af4c93  :  企画
+1e3b8b  :  沿線情報
+00a7e3  :  運行関連
+6c717c  :  その他
+*/
+
 body {
   margin: 0;
   font-family: "Segoe UI", "Helvetica", "Arial", sans-serif;
   background-color: #ffffff;
-  color: #333333;
+  color: #49585f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,8 +60,8 @@ aside#menu {
   width: 220px;
   min-width: 180px;
   max-width: 100%;
-  background-color: #f2f9fc;
-  border-right: 1px solid #d0eaf5;
+  background-color: #f1f9fd;
+  border-right: 1px solid #c6cccf;
   padding: 1.5em;
   box-sizing: border-box;
 }
@@ -45,7 +74,7 @@ aside#menu {
   aside#menu {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #d0eaf5;
+    border-bottom: 1px solid #c6cccf;
   }
 
   main#content {
@@ -82,7 +111,7 @@ main#content {
 
 main h2 {
   color: #00a7e3;
-  border-bottom: 2px solid #3cbceb;
+  border-bottom: 2px solid #c6cccf;
   padding-bottom: 0.3em;
   margin-top: 0;
 }
@@ -92,12 +121,12 @@ main ul {
 }
 
 footer {
-  background-color: #00a7e3;
+  background-color: #ffffff;
   text-align: center;
   padding: 1em;
   font-size: 0.9em;
-  color: #666666;
-  border-top: 1px solid #dddddd;
+  color: #3c4549;
+  border-top: 1px solid #3c4549;
 }
 
 .notice-text {
@@ -124,7 +153,7 @@ footer {
   padding: 0.6em 1.2em;
   border-radius: 6px;
   text-decoration: none;
-  border: 2px solid #008fc2;
+  border: 2px solid #0062b2;
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.15),
     0 0 6px rgba(0, 167, 227, 0.4);
@@ -153,7 +182,7 @@ footer {
   font-size: 0.9em;
   border-radius: 6px;
   text-decoration: none;
-  border: 2px solid #008fc2;
+  border: 2px solid #0062b2;
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.15),
     0 0 6px rgba(0, 167, 227, 0.4);
@@ -181,7 +210,7 @@ footer {
   padding: 0.6em 1.6em;
   border-radius: 9999px;
   text-decoration: none;
-  border: 2px solid #008fc2;
+  border: 2px solid #0062b2;
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.15),
     0 0 6px rgba(0, 167, 227, 0.4);
@@ -212,34 +241,34 @@ table {
   margin-top: 1.5em;
   font-family: "Segoe UI", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
-  color: #333333;
+  color: #49585f;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 table thead {
-  background-color: #f2f9fc;
+  background-color: #f4f6f8;
 }
 
 table th,
 table td {
-  border: 1px solid #d0eaf5;
+  border: 1px solid #c6cccf;
   padding: 0.8em 1em;
   text-align: left;
   vertical-align: top;
 }
 
 table th {
-  background-color: #e6f4fa;
+  background-color: #f0f0f0;
   font-weight: bold;
   color: #00a7e3;
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #f9fcfe;
+  background-color: #ffffff;
 }
 
 table tbody tr:hover {
-  background-color: #e0f5ff;
+  background-color: #3cbceb;
 }
 
 .line-color {
