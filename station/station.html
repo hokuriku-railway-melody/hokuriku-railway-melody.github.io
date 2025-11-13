@@ -235,7 +235,10 @@
         const transferHTML = transfers
           .map((name, i) => {
             const url = transferUrls[i];
-            if (!name || name === "none" || !url || url === "none") return null;
+            if (!name || name === "none") return null;
+            if (!url || url === "none") {
+              return `<span class="contact-button">${name}</span>`;
+            }
             return `<a href="${url}" class="contact-button">${name}</a>`;
           })
           .filter(Boolean)
