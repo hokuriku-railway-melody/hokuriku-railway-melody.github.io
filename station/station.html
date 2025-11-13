@@ -326,6 +326,7 @@
           tr.appendChild(td3);
   
           tbody.appendChild(tr);
+        }
 
         const galleryDiv = document.getElementById("gallery");
         galleryDiv.innerHTML = "";
@@ -350,8 +351,7 @@
             galleryDiv.appendChild(img);
           });
         }
-      }
-    );
+      });
   
     fetch("https://hokumelo.github.io/menu.json")
       .then(res => res.json())
