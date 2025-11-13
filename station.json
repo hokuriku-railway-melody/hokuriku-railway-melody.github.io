@@ -116,18 +116,18 @@
     "sta": "toyama",
     "natsta": "富山駅",
     "up": "黒部宇奈月温泉駅,呉羽駅,西富山駅",
-    "upurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=jr-west&sta=kurobe-unazukionsen,https://hokuriku-railway-melody.github.io/station/station.html?com=ainokaze-toyama&sta=kureha,https://hokuriku-railway-melody.github.io/station/station.html?com=jr-west&sta=nishi-toyama",
+    "upurl": "https://hokumelo.github.io/station/station.html?com=jr-west&sta=kurobe-unazukionsen,https://hokumelo.github.io/station/station.html?com=ainokaze-toyama&sta=kureha,https://hokumelo.github.io/station/station.html?com=jr-west&sta=nishi-toyama",
     "down": "新富山口",
-    "downurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=ainokaze-toyama&sta=shin-toyamaguchi",
+    "downurl": "https://hokumelo.github.io/station/station.html?com=ainokaze-toyama&sta=shin-toyamaguchi",
     "line": "北陸新幹線,あいの風とやま鉄道線,高山本線",
-    "lineurl": "https://hokuriku-railway-melody.github.io/line/jr-west/hokuriku-shinkansen/,https://hokuriku-railway-melody.github.io/line/ainokaze-toyama/ainokaze-toyama/,none,https://hokuriku-railway-melody.github.io/line/jr-west/takayama/",
+    "lineurl": "https://hokumelo.github.io/line/jr-west/hokuriku-shinkansen/,https://hokumelo.github.io/line/ainokaze-toyama/ainokaze-toyama/,none,https://hokumelo.github.io/line/jr-west/takayama/",
     "color": "#0072bc,#00a556,#0072bc",
     "platform": "1番のりば,1番のりば,1番のりば,1番のりば,1番のりば,2番のりば,2番のりば,2番のりば,2番のりば,2番のりば,3番のりば,3番のりば,3番のりば,3番のりば,3番のりば,4番のりば,4番のりば,4番のりば,4番のりば,4番のりば,5番のりば,5番のりば,5番のりば,5番のりば,5番のりば,11番のりば,11番のりば,12番のりば,12番のりば,13番のりば,13番のりば,14番のりば,14番のりば",
     "ad": "接近,発車,発車,発車,発車,接近,発車,発車,発車,発車,接近,発車,発車,発車,発車,接近,発車,発車,発車,発車,接近,発車,発車,発車,発車,接近,発車,接近,発車,接近,発車,接近,発車",
     "sound": "ふるさとの空 verA,春,アルプスの牧場,秋,冬 verA,ふるさとの空 verA,春,アルプスの牧場,秋,冬 verA,ふるさとの空 verA,春,アルプスの牧場,秋,冬 verA,ふるさとの空 verA,春,アルプスの牧場,秋,冬 verA,ふるさとの空 verA,春,アルプスの牧場,秋,冬 verA,鉄道唱歌,オリジナル,鉄道唱歌,オリジナル,鉄道唱歌,オリジナル,鉄道唱歌,オリジナル",
-    "melody": "https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/496ad393_jr-west_hokuriku-shinkansen_toyama_12_depart.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/496ad393_jr-west_hokuriku-shinkansen_toyama_12_depart.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/4c34035f_jr-west_hokuriku-shinkansen_toyama_14_depart.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/4c34035f_jr-west_hokuriku-shinkansen_toyama_14_depart.wav",
+    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/98c92e78_ainokaze-toyama_ainokaze-toyama_higashi-toyama_1_approach.wav,none,none,none,none,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/496ad393_jr-west_hokuriku-shinkansen_toyama_12_depart.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/496ad393_jr-west_hokuriku-shinkansen_toyama_12_depart.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/4c34035f_jr-west_hokuriku-shinkansen_toyama_14_depart.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/30364bd0_jr-west_hokuriku-shinkansen_kurobe-unazukionsen_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/4c34035f_jr-west_hokuriku-shinkansen_toyama_14_depart.wav",
     "note": "東富山駅1番のりばで収録,3～5月のみ,6～8月,9～11月のみ,12～2月のみ,東富山駅1番のりばで収録,3～5月のみ,6～8月,9～11月のみ,12～2月のみ,東富山駅1番のりばで収録,3～5月のみ,6～8月,9～11月のみ,12～2月のみ,東富山駅1番のりばで収録,3～5月のみ,6～8月,9～11月のみ,12～2月のみ,東富山駅1番のりばで収録,3～5月のみ,6～8月,9～11月のみ,12～2月のみ,黒部宇奈月温泉駅2番のりばで収録,富山駅12番のりばで収録,黒部宇奈月温泉駅2番のりばで収録,none,黒部宇奈月温泉駅2番のりばで収録,富山駅14番のりばで収録,黒部宇奈月温泉駅2番のりばで収録,none",
-    "image": "https://hokuriku-railway-melody.github.io/image/e7_kagayaki.png",
+    "image": "https://hokumelo.github.io/image/e7_kagayaki.png",
     "numshape": "none",
     "numcolor": "none",
     "numpaint": "none",
@@ -137,7 +137,7 @@
     "numsigncolor": "none",
     "numnumcolor": "none",
     "transfer": "電鉄富山駅,富山駅停留場,電鉄富山駅・エスタ前停留場",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=toyama-station,https://hokuriku-railway-melody.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama-station-esta-mae",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama,https://hokumelo.github.io/station/station.html?com=toyama-chiho&sta=toyama-station,https://hokumelo.github.io/station/station.html?com=toyama-chiho&sta=dentetsu-toyama-station-esta-mae",
     "gallery": "none"
   },
   {
@@ -197,9 +197,9 @@
     "platform": "テスト",
     "ad": "テスト",
     "sound": "草競馬",
-    "melody": "https://raw.githubusercontent.com/hokuriku-railway-melody/hokuriku-railway-melody.github.io/main/melody/file/35b2dab0_jr-west_takayama_nishi-toyama_1_approach.wav",
+    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/35b2dab0_jr-west_takayama_nishi-toyama_1_approach.wav",
     "note": "none",
-    "image": "https://hokuriku-railway-melody.github.io/image/413.png",
+    "image": "https://hokumelo.github.io/image/413.png",
     "numshape": "square",
     "numcolor": "#0000ff",
     "numpaint": "fill",
@@ -209,7 +209,7 @@
     "numsigncolor": "#ffffff",
     "numnumcolor": "#ffffff",
     "transfer": "test2,test3,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=test2&sta=test2,https://hokumelo.github.io/station/station.html?com=test3&sta=test3,https://hokumelo.github.io/station/station.html?com=test4&sta=test4",
     "gallery": "none"
   },
   {
@@ -229,7 +229,7 @@
     "sound": "テスト2",
     "melody": "none",
     "note": "none",
-    "image": "https://hokuriku-railway-melody.github.io/image/521_1st.png",
+    "image": "https://hokumelo.github.io/image/521_1st.png",
     "numshape": "circle",
     "numcolor": "#00ff00",
     "numpaint": "edge",
@@ -239,7 +239,7 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test3,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=test&sta=test,https://hokumelo.github.io/station/station.html?com=test3&sta=test3,https://hokumelo.github.io/station/station.html?com=test4&sta=test4",
     "gallery": "none"
   },
   {
@@ -259,7 +259,7 @@
     "sound": "テスト3",
     "melody": "none",
     "note": "none",
-    "image": "https://hokuriku-railway-melody.github.io/image/225.png",
+    "image": "https://hokumelo.github.io/image/225.png",
     "numshape": "square",
     "numcolor": "#ff0000",
     "numpaint": "edge",
@@ -269,7 +269,7 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test2,test4",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test4&sta=test4",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=test&sta=test,https://hokumelo.github.io/station/station.html?com=test2&sta=test2,https://hokumelo.github.io/station/station.html?com=test4&sta=test4",
     "gallery": "none"
   },
   {
@@ -289,7 +289,7 @@
     "sound": "テスト4",
     "melody": "none",
     "note": "none",
-    "image": "https://hokuriku-railway-melody.github.io/image/10030.png",
+    "image": "https://hokumelo.github.io/image/10030.png",
     "numshape": "square",
     "numcolor": "#ffff00",
     "numpaint": "edge",
@@ -299,7 +299,7 @@
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test2,test3",
-    "transferurl": "https://hokuriku-railway-melody.github.io/station/station.html?com=test&sta=test,https://hokuriku-railway-melody.github.io/station/station.html?com=test2&sta=test2,https://hokuriku-railway-melody.github.io/station/station.html?com=test3&sta=test3",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=test&sta=test,https://hokumelo.github.io/station/station.html?com=test2&sta=test2,https://hokumelo.github.io/station/station.html?com=test3&sta=test3",
     "gallery": "none"
   }
 ]
