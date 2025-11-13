@@ -187,8 +187,8 @@
     "numnum": "none",
     "numsigncolor": "none",
     "numnumcolor": "none",
-    "transfer": "無し",
-    "transferurl": "none",
+    "transfer": "高岡駅停留場",
+    "transferurl": "https://hokumelo.github.io/station/station.html?com=manyosen&sta=takaoka-station",
     "gallery": "none"
   },
   {
@@ -277,8 +277,8 @@
     "numnum": "none",
     "numsigncolor": "none",
     "numnumcolor": "none",
-    "transfer": "高岡駅停留場",
-    "transferurl": "https://hokumelo.github.io/station/station.html?com=manyosen&sta=takaoka-station",
+    "transfer": "none",
+    "transferurl": "none",
     "gallery": "none"
   },
   {
