@@ -1,12 +1,12 @@
 [
-  { "title": "ホーム", "link": "https://hokuriku-railway-melody.github.io/" },
-  { "title": "会社から選ぶ", "link": "https://hokuriku-railway-melody.github.io/company/" },
-  { "title": "路線から選ぶ", "link": "https://hokuriku-railway-melody.github.io/line/" },
-  { "title": "駅から選ぶ", "link": "https://hokuriku-railway-melody.github.io/station/" },
-  { "title": "曲から選ぶ", "link": "https://hokuriku-railway-melody.github.io/melody/" },
-  { "title": "お問い合わせ", "link": "https://hokuriku-railway-melody.github.io/support/" },
-  { "title": "お知らせ", "link": "https://hokuriku-railway-melody.github.io/news/" },
-  { "title": "リンク集", "link": "https://hokuriku-railway-melody.github.io/link/" },
-  { "title": "提供", "link": "https://hokuriku-railway-melody.github.io/offer/" },
+  { "title": "ホーム", "link": "https://hokumelo.github.io/" },
+  { "title": "会社から選ぶ", "link": "https://hokumelo.github.io/company/" },
+  { "title": "路線から選ぶ", "link": "https://hokumelo.github.io/line/" },
+  { "title": "駅から選ぶ", "link": "https://hokumelo.github.io/station/" },
+  { "title": "曲から選ぶ", "link": "https://hokumelo.github.io/melody/" },
+  { "title": "お問い合わせ", "link": "https://hokumelo.github.io/support/" },
+  { "title": "お知らせ", "link": "https://hokumelo.github.io/news/" },
+  { "title": "リンク集", "link": "https://hokumelo.github.io/link/" },
+  { "title": "提供", "link": "https://hokumelo.github.io/offer/" },
   { "title": "鉄道モバイル", "link": "https://www.te2do.jp/" }
 ]
