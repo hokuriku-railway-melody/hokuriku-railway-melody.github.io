@@ -131,14 +131,14 @@
   
         heading.innerHTML = `${colorSpan}${match.natcom} ${match.natsta}`;
   
-        const sign = match.numsign !== "none" ? match.numsign : "";
-        const num = match.numnum !== "none" ? match.numnum : "";
-  
+        const signs = match.numsign !== "none" ? match.numsign.split(",") : [];
+        const nums = match.numnum !== "none" ? match.numnum.split(",") : [];
+        
         if (
           match.numshape !== "none" &&
           match.numcolor !== "none" &&
           match.numpaint !== "none" &&
-          (sign || num)
+          (signs.length > 0 || nums.length > 0)
         ) {
           const shape = match.numshape;
           const color = match.numcolor;
@@ -146,50 +146,56 @@
           const signColor = match.numsigncolor || match.numtextcolor || "#000";
           const numColor = match.numnumcolor || match.numtextcolor || "#000";
           const colorArea = match.numcolorarea || "none";
-  
-          const badge = document.createElement("span");
-          badge.style.width = "48px";
-          badge.style.height = "48px";
-          badge.style.display = "inline-block";
-          badge.style.position = "relative";
-          badge.style.fontWeight = "bold";
-          badge.style.marginLeft = "0.5em";
-          badge.style.border = `2px solid ${color}`;
-          badge.style.verticalAlign = "middle";
-          badge.style.textAlign = "center";
-          if (shape === "circle") badge.style.borderRadius = "50%";
-  
-          if (paint === "fill") {
-            badge.style.backgroundColor = color;
-          } else if (paint === "edge" && colorArea !== "none") {
-            badge.style.background = colorArea === "top"
-              ? `linear-gradient(to bottom, ${color} 50%, #fff 50%)`
-              : `linear-gradient(to bottom, #fff 50%, ${color} 50%)`;
-          } else {
-            badge.style.backgroundColor = "#fff";
+        
+          const count = Math.max(signs.length, nums.length);
+          for (let i = 0; i < count; i++) {
+            const sign = signs[i] || "";
+            const num = nums[i] || "";
+        
+            const badge = document.createElement("span");
+            badge.style.width = "48px";
+            badge.style.height = "48px";
+            badge.style.display = "inline-block";
+            badge.style.position = "relative";
+            badge.style.fontWeight = "bold";
+            badge.style.marginLeft = "0.5em";
+            badge.style.border = `2px solid ${color}`;
+            badge.style.verticalAlign = "middle";
+            badge.style.textAlign = "center";
+            if (shape === "circle") badge.style.borderRadius = "50%";
+        
+            if (paint === "fill") {
+              badge.style.backgroundColor = color;
+            } else if (paint === "edge" && colorArea !== "none") {
+              badge.style.background = colorArea === "top"
+                ? `linear-gradient(to bottom, ${color} 50%, #fff 50%)`
+                : `linear-gradient(to bottom, #fff 50%, ${color} 50%)`;
+            } else {
+              badge.style.backgroundColor = "#fff";
+            }
+        
+            const inner = document.createElement("div");
+            inner.style.position = "absolute";
+            inner.style.top = "0";
+            inner.style.left = "0";
+            inner.style.width = "100%";
+            inner.style.height = "100%";
+            inner.style.display = "flex";
+            inner.style.flexDirection = "column";
+            inner.style.justifyContent = "center";
+            inner.style.alignItems = "center";
+        
+            if (sign && num) {
+              inner.style.fontSize = "20px";
+              inner.innerHTML = `<div style="color:${signColor}">${sign}</div><div style="color:${numColor}">${num}</div>`;
+            } else {
+              inner.style.fontSize = "40px";
+              inner.innerHTML = `<div style="color:${sign ? signColor : numColor}">${sign || num}</div>`;
+            }
+        
+            badge.appendChild(inner);
+            heading.appendChild(badge);
           }
-  
-          const inner = document.createElement("div");
-          inner.style.position = "absolute";
-          inner.style.top = "0";
-          inner.style.left = "0";
-          inner.style.width = "100%";
-          inner.style.height = "100%";
-          inner.style.display = "flex";
-          inner.style.flexDirection = "column";
-          inner.style.justifyContent = "center";
-          inner.style.alignItems = "center";
-  
-          if (sign && num) {
-            inner.style.fontSize = "20px";
-            inner.innerHTML = `<div style="color:${signColor}">${sign}</div><div style="color:${numColor}">${num}</div>`;
-          } else {
-            inner.style.fontSize = "40px";
-            inner.innerHTML = `<div style="color:${sign ? signColor : numColor}">${sign || num}</div>`;
-          }
-  
-          badge.appendChild(inner);
-          heading.appendChild(badge);
         }
   
         const upNames = (match.up?.split(",") || []).filter(name => name !== "none");
