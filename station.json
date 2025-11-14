@@ -1079,7 +1079,7 @@
     "upurl": "https://hokumelo.github.io/station/station.html?com=jr-west&sta=echizen-takefu",
     "down": "新疋田駅,西敦賀駅,南今庄駅",
     "downurl": "https://hokumelo.github.io/station/station.html?com=jr-west&sta=shin-hikida,https://hokumelo.github.io/station/station.html?com=jr-west&sta=nishi-tsuruga,https://hokumelo.github.io/station/station.html?com=hapi-line-fukui&sta=minami-imajo",
-    "line": "北陸新幹線,<span style="width: 16px; height: 16px; display: inline-block; position: relative; font-weight: bold; margin-left: 0.5em; border: 2px solid #007ac2; vertical-align: middle; text-align: center; background-color: #007ac2;"><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px;"><div style="color:#ffffff">A</div></div></span><span style="width: 16px; height: 16px; display: inline-block; position: relative; font-weight: bold; margin-left: 0.5em; border: 2px solid #00b2e6; vertical-align: middle; text-align: center; background-color: #00b2e6;"><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px;"><div style="color:#ffffff">B</div></div></span> 北陸本線,小浜線,ハピラインふくい線",
+    "line": "北陸新幹線,北陸本線,小浜線,ハピラインふくい線",
     "lineurl": "https://hokumelo.github.io/line/jr-west/hokuriku-shinkansen/,https://hokumelo.github.io/line/jr-west/hokuriku/,https://hokumelo.github.io/line/jr-west/obama/,https://hokumelo.github.io/line/hapi-line-fukui/hapi-line-fukui/",
     "color": "#0072bc,#0072bc,#0072bc,#ec1c9c",
     "platform": "000",
