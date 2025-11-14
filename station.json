@@ -163,7 +163,7 @@
   },
   {
     "com": "ainokaze-toyama",
-    "natcom": "あいの風とやま鉄道",
+    "natcom": "あいの風とやま鉄道・JR西日本",
     "sta": "takaoka",
     "natsta": "高岡駅",
     "up": "高岡やぶなみ駅",
@@ -373,7 +373,7 @@
   },
   {
     "com": "ainokaze-toyama",
-    "natcom": "あいの風とやま鉄道",
+    "natcom": "あいの風とやま鉄道・富山地方鉄道",
     "sta": "namerikawa",
     "natsta": "滑川駅",
     "up": "水橋駅",
@@ -772,7 +772,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・えちごトキめき鉄道",
     "sta": "itoigawa",
     "natsta": "糸魚川駅",
     "up": "上越妙高駅,青海駅,姫川駅",
@@ -892,7 +892,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・IRいしかわ鉄道",
     "sta": "kanazawa",
     "natsta": "金沢駅,西金沢駅",
     "up": "新高岡駅",
@@ -922,7 +922,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・IRいしかわ鉄道",
     "sta": "komatsu",
     "natsta": "小松駅",
     "up": "金沢駅,粟津駅",
@@ -952,7 +952,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・IRいしかわ鉄道",
     "sta": "kagaonsen",
     "natsta": "加賀温泉駅",
     "up": "小松駅,大聖寺駅",
@@ -982,7 +982,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・ハピラインふくい",
     "sta": "awaraonsen",
     "natsta": "芦原温泉駅",
     "up": "加賀温泉駅,丸岡駅",
@@ -1012,7 +1012,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・ハピラインふくい",
     "sta": "fukui",
     "natsta": "福井駅",
     "up": "芦原温泉駅,越前花堂駅",
@@ -1072,7 +1072,7 @@
   },
   {
     "com": "jr-west",
-    "natcom": "JR西日本",
+    "natcom": "JR西日本・ハピラインふくい",
     "sta": "tsuruga",
     "natsta": "敦賀駅",
     "up": "越前たけふ駅",
