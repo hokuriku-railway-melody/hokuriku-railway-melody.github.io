@@ -133,24 +133,40 @@
   
         const signs = match.numsign !== "none" ? match.numsign.split(",") : [];
         const nums = match.numnum !== "none" ? match.numnum.split(",") : [];
+        const shapes = match.numshape !== "none" ? match.numshape.split(",") : [];
+        const colors = match.numcolor !== "none" ? match.numcolor.split(",") : [];
+        const paints = match.numpaint !== "none" ? match.numpaint.split(",") : [];
+        const areas = match.numcolorarea !== "none" ? match.numcolorarea.split(",") : [];
+        const signColors = match.numsigncolor !== "none" ? match.numsigncolor.split(",") : [];
+        const numColors = match.numnumcolor !== "none" ? match.numnumcolor.split(",") : [];
+        const textColorFallback = match.numtextcolor || "#000";
+        
+        const count = Math.max(
+          signs.length,
+          nums.length,
+          shapes.length,
+          colors.length,
+          paints.length,
+          areas.length,
+          signColors.length,
+          numColors.length
+        );
         
         if (
-          match.numshape !== "none" &&
-          match.numcolor !== "none" &&
-          match.numpaint !== "none" &&
+          shapes.length > 0 &&
+          colors.length > 0 &&
+          paints.length > 0 &&
           (signs.length > 0 || nums.length > 0)
         ) {
-          const shape = match.numshape;
-          const color = match.numcolor;
-          const paint = match.numpaint;
-          const signColor = match.numsigncolor || match.numtextcolor || "#000";
-          const numColor = match.numnumcolor || match.numtextcolor || "#000";
-          const colorArea = match.numcolorarea || "none";
-        
-          const count = Math.max(signs.length, nums.length);
           for (let i = 0; i < count; i++) {
             const sign = signs[i] || "";
             const num = nums[i] || "";
+            const shape = shapes[i] || "circle";
+            const color = colors[i] || "#000";
+            const paint = paints[i] || "fill";
+            const area = areas[i] || "none";
+            const signColor = signColors[i] || textColorFallback;
+            const numColor = numColors[i] || textColorFallback;
         
             const badge = document.createElement("span");
             badge.style.width = "48px";
@@ -166,8 +182,8 @@
         
             if (paint === "fill") {
               badge.style.backgroundColor = color;
-            } else if (paint === "edge" && colorArea !== "none") {
-              badge.style.background = colorArea === "top"
+            } else if (paint === "edge" && area !== "none") {
+              badge.style.background = area === "top"
                 ? `linear-gradient(to bottom, ${color} 50%, #fff 50%)`
                 : `linear-gradient(to bottom, #fff 50%, ${color} 50%)`;
             } else {
