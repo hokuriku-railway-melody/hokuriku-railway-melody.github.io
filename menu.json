@@ -1,12 +1,13 @@
 [
   { "title": "ホーム", "link": "https://hokumelo.github.io/" },
+  { "title": "お知らせ", "link": "https://hokumelo.github.io/news/" },
   { "title": "会社から選ぶ", "link": "https://hokumelo.github.io/company/" },
   { "title": "路線から選ぶ", "link": "https://hokumelo.github.io/line/" },
   { "title": "駅から選ぶ", "link": "https://hokumelo.github.io/station/" },
   { "title": "曲から選ぶ", "link": "https://hokumelo.github.io/melody/" },
-  { "title": "お問い合わせ", "link": "https://hokumelo.github.io/support/" },
-  { "title": "お知らせ", "link": "https://hokumelo.github.io/news/" },
-  { "title": "リンク集", "link": "https://hokumelo.github.io/link/" },
+  { "title": "車両形式から選ぶ", "link": "https://hokumelo.github.io/car/" },
   { "title": "提供", "link": "https://hokumelo.github.io/offer/" },
+  { "title": "リンク集", "link": "https://hokumelo.github.io/link/" },
+  { "title": "お問い合わせ", "link": "https://hokumelo.github.io/support/" },
   { "title": "鉄道モバイル", "link": "https://www.te2do.jp/" }
 ]
