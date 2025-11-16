@@ -116,6 +116,13 @@ main h2 {
   margin-top: 0;
 }
 
+main h3 {
+  color: #0062b2;
+  border-bottom: 2px solid #c6cccf;
+  padding-bottom: 0.3em;
+  margin-top: 0;
+}
+
 main ul {
   padding-left: 1.2em;
 }
