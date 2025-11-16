@@ -211,15 +211,6 @@
         
             badge.appendChild(inner);
             heading.appendChild(badge);
-
-            requestAnimationFrame(() => {
-              const maxHeight = badge.clientHeight;
-              let currentSize = parseInt(inner.style.fontSize, 10);
-              while (inner.scrollHeight > maxHeight && currentSize > 8) {
-                currentSize -= 1;
-                inner.style.fontSize = `${currentSize}px`;
-              }
-            });
           }
         }
   
