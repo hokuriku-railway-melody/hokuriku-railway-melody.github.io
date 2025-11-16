@@ -54,9 +54,8 @@
     
     document.querySelectorAll(".melody-cell").forEach(td => {
       const rawHtml = td.innerHTML.trim();
-      td.innerHTML = ""; // UIを入れるために初期化
+      td.innerHTML = "";
     
-      // <br>で分割してURL配列に
       const urlList = rawHtml
         .split(/<br\s*\/?>/i)
         .map(s => s.trim())
