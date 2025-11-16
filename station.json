@@ -1915,7 +1915,7 @@
     "numpaint": "edge",
     "numcolorarea": "none",
     "numsign": "T",
-    "numnum": "none",
+    "numnum": "01",
     "numsigncolor": "#000000",
     "numnumcolor": "#000000",
     "transfer": "test,test2,test3",
