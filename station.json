@@ -1237,7 +1237,7 @@
     "color": "#0072bc,#9c1618",
     "platform": "1番のりば,2番のりば,2番のりば",
     "ad": "接近,接近,放送",
-    "sound": "線路は続くよどこまでも ver ジャズ,線路は続くよどこまでも ver ジャズ,遅延案内放送",
+    "sound": "線路は続くよどこまでも ver ジャズ,線路は続くよどこまでも ver ジャズ,遅延案内放送・保留音（エーデルワイス ver 新音源）",
     "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/e0892f18_jr-west_takayama_inotani_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/e0892f18_jr-west_takayama_inotani_2_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/5d355a81_jr-west_takayama_inotani_2_announce.wav",
     "note": "猪谷駅2番のりばで収録・非密着,非密着,案内放送",
     "image": "https://hokumelo.github.io/image/hc85_hida.png",
