@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 本線</title>
+  <link rel="stylesheet" href="https://hokumelo.github.io/style.css">
+  <link rel="icon" href="https://hokumelo.github.io/image/edv.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokumelo.github.io/" style="color: white;"><img src="https://hokumelo.github.io/image/edv.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>本線</h2>
+        <p>本線の駅の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>路線</h2>
+        <img src="https://hokumelo.github.io/image/kbhfa.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=unazuki" class="contact-button" style="position: relative; top: -1em;">宇奈月駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=yanagibashi" class="contact-button" style="position: relative; top: -1em;">柳橋駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=moriishi" class="contact-button" style="position: relative; top: -1em;">森石駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=kuronagi" class="contact-button" style="position: relative; top: -1em;">黒薙駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/abzgl.png" alt="路線表示画像"><a href="https://hokumelo.github.io/line/kansai-electric-power/kuronagi-branch/" class="contact-button" style="position: relative; top: -1em;">関西電力：黒部専用鉄道黒薙支線</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=sasadaira" class="contact-button" style="position: relative; top: -1em;">笹平駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=dashidaira" class="contact-button" style="position: relative; top: -1em;">出平駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=nekomata" class="contact-button" style="position: relative; top: -1em;">猫又駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=kanetsuri" class="contact-button" style="position: relative; top: -1em;">鐘釣駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=koyadaira" class="contact-button" style="position: relative; top: -1em;">小屋平駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=keyakidaira" class="contact-button" style="position: relative; top: -1em;">欅平駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/str.png" alt="路線表示画像"><a href="https://hokumelo.github.io/line/kansai-electric-power/kurobe-senyo/" class="contact-button" style="position: relative; top: -1em;">関西電力：黒部専用鉄道</a>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>使用車両</h2>
+        <a href="https://hokumelo.github.io/car/000/" class="contact-button"><img src="https://hokumelo.github.io/image/000" alt="鉄道車両画像"> 000</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokumelo.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
