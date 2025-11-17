@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑 | 黒部専用鉄道</title>
+  <link rel="stylesheet" href="https://hokumelo.github.io/style.css">
+  <link rel="icon" href="https://hokumelo.github.io/image/bb.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokumelo.github.io/" style="color: white;"><img src="https://hokumelo.github.io/image/bb.png" alt="鉄道車両画像"> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>黒部専用鉄道</h2>
+        <p>黒部専用鉄道の駅の一覧です。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>路線</h2>
+        <img src="https://hokumelo.github.io/image/str.png" alt="路線表示画像"><a href="https://hokumelo.github.io/line/kurobe-gorge/main/" class="contact-button" style="position: relative; top: -1em;">黒部峡谷鉄道：本線</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kurobe-gorge&sta=keyakidaira" class="contact-button" style="position: relative; top: -1em;">欅平駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=keyakidaira-kabu" class="contact-button" style="position: relative; top: -1em;">欅平下部駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=keyakidaira-jobu" class="contact-button" style="position: relative; top: -1em;">欅平上部駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=shijimidani" class="contact-button" style="position: relative; top: -1em;">蜆谷駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=shiaidani" class="contact-button" style="position: relative; top: -1em;">志合谷駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=oriodani" class="contact-button" style="position: relative; top: -1em;">折尾谷駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=azoharaonsen" class="contact-button" style="position: relative; top: -1em;">阿曽原温泉駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=sennindani" class="contact-button" style="position: relative; top: -1em;">仙人谷駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/bhf.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=higashitan" class="contact-button" style="position: relative; top: -1em;">東谷駅</a>
+        <br>
+        <img src="https://hokumelo.github.io/image/kbhfe.png" alt="路線表示画像"><a href="https://hokumelo.github.io/station/station.html?com=kansai-electric-power&sta=kurobegawadaiyonhatsudensho-mae" class="contact-button" style="position: relative; top: -1em;">黒部川第四発電所前駅</a>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>使用車両</h2>
+        <a href="https://hokumelo.github.io/car/000/" class="contact-button"><img src="https://hokumelo.github.io/image/000" alt="鉄道車両画像"> 000</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokumelo.github.io/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
