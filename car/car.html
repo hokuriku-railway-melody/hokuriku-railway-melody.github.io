@@ -99,6 +99,7 @@
         document.title = `ほくりく駅メロ図鑑 | ${match.natcar}`;
         document.getElementById("favicon").href = match.image;
         document.getElementById("car-image").src = match.image;
+        document.getElementById("natcar-image").src = match.image;
   
         const heading = document.getElementById("car-heading");
   
@@ -110,7 +111,7 @@
           colorSpan = `<span class="line-color" style="background: linear-gradient(to bottom, ${segments});"></span>`;
         }
   
-        heading.innerHTML = `<img id="car-image" src="" alt="鉄道車両画像"/>${match.natcom} ${match.natcar}`;
+        heading.innerHTML = `<img id="natcar-image" src="" alt="鉄道車両画像"/>${match.natcom} ${match.natcar}`;
   
         const lines = match.line.split(",");
         const urls = match.lineurl.split(",");
