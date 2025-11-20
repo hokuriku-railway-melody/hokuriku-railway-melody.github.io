@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の駅メロディーをまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく駅メロ図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく駅メロ図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく駅メロ図鑑">
+  <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
+
+  <title>ほくりく駅メロ図鑑</title>
+  <link rel="stylesheet" href="https://hokumelo.github.io/style.css"/>
+  <link rel="icon" href="" id="favicon">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokumelo.github.io/" style="color: white;"><img id="car-image" src="" alt="鉄道車両画像"/> ほくりく駅メロ図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2 id="car-heading"></h2>
+        <div id="car-nav"></div>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>駅メロディー</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>種類</th>
+              <td>曲</td>
+              <td>音声</td>
+              <td>備考</td>
+            </tr>
+          </thead>
+          <tbody id="car-table-body"></tbody>
+        </table>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>ギャラリー</h2>
+        <div id="gallery"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const com = params.get("com");
+    const car = params.get("car");
+  
+    fetch("https://hokumelo.github.io/car.json")
+      .then(res => res.json())
+      .then(data => {
+        function formatTime(seconds) {
+          if (isNaN(seconds)) return "0:00";
+          const min = Math.floor(seconds / 60);
+          const sec = Math.floor(seconds % 60);
+          return `${min}:${sec.toString().padcarrt(2, "0")}`;
+        }
+        
+        let match = data.find(item => item.com === com && item.car === car);
+  
+        if (!match) {
+          match = {
+            natcom: "存在しないページ：",
+            natcar: "Error 404 Not Found",
+            line: "この形式のページは存在しません。",
+            lineurl: "none",
+            type: "エラー",
+            sound: "エラー",
+            melody: "none",
+            note: "正しいURLを入力するか、更新を待ってください。",
+            image: "https://hokumelo.github.io/image/413.png"
+          };
+        }
+  
+        document.title = `ほくりく駅メロ図鑑 | ${match.natcar}`;
+        document.getElementById("favicon").href = match.image;
+        document.getElementById("car-image").src = match.image;
+  
+        const heading = document.getElementById("car-heading");
+  
+        let colorSpan = "";
+        if (match.color && match.color !== "none") {
+          const colors = match.color.split(",");
+          const segmentHeight = 100 / colors.length;
+          const segments = colors.map((c, i) => `${c} ${i * segmentHeight}%, ${c} ${(i + 1) * segmentHeight}%`).join(", ");
+          colorSpan = `<span class="line-color" style="background: linear-gradient(to bottom, ${segments});"></span>`;
+        }
+  
+        heading.innerHTML = `<img id="car-image" src="" alt="鉄道車両画像"/>${match.natcom} ${match.natcar}`;
+  
+        const lines = match.line.split(",");
+        const urls = match.lineurl.split(",");
+        const lineHTML = lines.map((line, i) => {
+          const url = urls[i];
+          return url !== "none"
+            ? `<a href="${url}" class="contact-button">${line}</a>`
+            : `<span class="contact-button">${line}</span>`;
+        }).join("<br>");
+        document.getElementById("line-links").innerHTML = lineHTML;
+
+        const types = match.type.split(",");
+        const sounds = match.sound.split(",");
+        const melodies = match.melody.split(",");
+        const notes = match.note.split(",");
+        
+        const tbody = document.getElementById("car-table-body");
+        tbody.innerHTML = "";
+        
+        for (let i = 0; i < types.length; i++) {
+          const tr = document.createElement("tr");
+        
+          const th1 = document.createElement("th");
+          th1.textContent = types[i];
+          tr.appendChild(th1);
+        
+          const td1 = document.createElement("td");
+          td1.textContent = (sounds[i] === "none") ? "なし" : sounds[i];
+          tr.appendChild(td1);
+        
+          const td2 = document.createElement("td");
+        
+          if (melodies[i] !== "none") {
+            const audio = document.createElement("audio");
+            audio.src = melodies[i];
+            audio.preload = "metadata";
+            audio.style.display = "none";
+        
+            const playLink = document.createElement("a");
+            playLink.textContent = "▶";
+            playLink.id = "contact-button-square";
+            playLink.style.cursor = "pointer";
+        
+            const stopLink = document.createElement("a");
+            stopLink.textContent = "■";
+            stopLink.id = "contact-button-square";
+            stopLink.style.cursor = "pointer";
+            stopLink.style.marginLeft = "0.5em";
+        
+            const timeDisplay = document.createElement("span");
+            timeDisplay.textContent = "0:00/0:00";
+            timeDisplay.style.marginLeft = "0.5em";
+        
+            playLink.onclick = () => {
+              audio.play();
+            };
+        
+            stopLink.onclick = () => {
+              audio.pause();
+              audio.currentTime = 0;
+              updateTimeDisplay();
+            };
+        
+            function updateTimeDisplay() {
+              const current = formatTime(audio.currentTime);
+              const total = formatTime(audio.duration || 0);
+              timeDisplay.textContent = `${current}/${total}`;
+            }
+        
+            audio.addEventListener("timeupdate", updateTimeDisplay);
+            audio.addEventListener("loadedmetadata", updateTimeDisplay);
+        
+            td2.appendChild(playLink);
+            td2.appendChild(stopLink);
+            td2.appendChild(timeDisplay);
+            td2.appendChild(audio);
+          } else {
+            td2.textContent = "なし";
+          }
+          tr.appendChild(td2);
+        
+          const td3 = document.createElement("td");
+          td3.textContent = (!notes[i] || notes[i] === "none") ? "なし" : notes[i];
+          tr.appendChild(td3);
+        
+          tbody.appendChild(tr);
+        }
+
+        const galleryDiv = document.getElementById("gallery");
+        galleryDiv.innerHTML = "";
+
+        const galleryData = match.gallery || "none";
+
+        if (galleryData === "none") {
+          const link = document.createElement("a");
+          link.href = "https://forms.gle/iGUxiCi1Q9uHKSV5A";
+          link.className = "contact-button-round";
+          link.textContent = "鉄道写真を提供する";
+          galleryDiv.appendChild(link);
+        } else {
+          const urls = galleryData.split(",").map(url => url.trim()).filter(url => url !== "");
+          urls.forEach(url => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "駅写真";
+            img.style.maxWidth = "100%";
+            img.style.height = "auto";
+            img.style.margin = "0.5em 0";
+            galleryDiv.appendChild(img);
+          });
+        }
+      });
+  
+    fetch("https://hokumelo.github.io/menu.json")
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById("menu");
+        const ul = document.createElement("ul");
+        data.forEach(item => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
