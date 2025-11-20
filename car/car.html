@@ -46,6 +46,7 @@
               <th>種類</th>
               <td>曲</td>
               <td>音声</td>
+              <td>会社</td>
               <td>備考</td>
             </tr>
           </thead>
@@ -124,6 +125,7 @@
         const types = match.type.split(",");
         const sounds = match.sound.split(",");
         const melodies = match.melody.split(",");
+        const usecoms = match.usecom.split(",");
         const notes = match.note.split(",");
         
         const tbody = document.getElementById("car-table-body");
@@ -190,10 +192,14 @@
             td2.textContent = "なし";
           }
           tr.appendChild(td2);
-        
+          
           const td3 = document.createElement("td");
-          td3.textContent = (!notes[i] || notes[i] === "none") ? "なし" : notes[i];
+          td3.textContent = (usecoms[i] === "none" || !usecoms[i]) ? "なし" : usecoms[i];
           tr.appendChild(td3);
+
+          const td4 = document.createElement("td");
+          td4.textContent = (!notes[i] || notes[i] === "none") ? "なし" : notes[i];
+          tr.appendChild(td4);
         
           tbody.appendChild(tr);
         }
