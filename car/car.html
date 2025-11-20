@@ -207,9 +207,14 @@
 
         const galleryDiv = document.getElementById("gallery");
         galleryDiv.innerHTML = "";
-
+        
+        galleryDiv.style.display = "flex";
+        galleryDiv.style.flexWrap = "wrap";
+        galleryDiv.style.justifyContent = "flex-start";
+        galleryDiv.style.gap = "0.5em";
+        
         const galleryData = match.gallery || "none";
-
+        
         if (galleryData === "none") {
           const link = document.createElement("a");
           link.href = "https://forms.gle/iGUxiCi1Q9uHKSV5A";
@@ -221,11 +226,24 @@
           urls.forEach(url => {
             const img = document.createElement("img");
             img.src = url;
-            img.alt = "駅写真";
-            img.style.maxWidth = "100%";
+            img.alt = "車両写真";
+        
+            img.style.width = "100%";
+            img.style.maxWidth = "512px";
             img.style.height = "auto";
-            img.style.margin = "0.5em 0";
-            galleryDiv.appendChild(img);
+            img.style.flex = "1 1 auto";
+            img.style.boxSizing = "border-box";
+            img.style.margin = "0";
+        
+            const wrapper = document.createElement("div");
+            wrapper.style.flex = "0 0 auto";
+            wrapper.style.maxWidth = "512px";
+            wrapper.style.width = "100%";
+            wrapper.style.boxSizing = "border-box";
+            wrapper.style.margin = "0.25em";
+        
+            wrapper.appendChild(img);
+            galleryDiv.appendChild(wrapper);
           });
         }
       });
