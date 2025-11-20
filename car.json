@@ -6,6 +6,21 @@
     "__comment__": "********************JR東********************"
   },
   {
+    "com": "jr-east",
+    "natcom": "JR東日本",
+    "car": "e7",
+    "natcar": "E7系",
+    "line": "上越新幹線,北陸新幹線,東北新幹線",
+    "lineurl": "https://hokumelo.github.io/line/jr-east/joetsu-shinkansen/,https://hokumelo.github.io/line/jr-west/hokuriku-shinkansen/,https://hokumelo.github.io/line/jr-east/tohoku-shinkansen/",
+    "type": "車内チャイム",
+    "sound": "TR12",
+    "melody": "none",
+    "usecom": "JR東日本",
+    "note": "W7系と同一設計",
+    "image": "https://hokumelo.github.io/image/e7_kagayaki.png",
+    "gallery": "none"
+  },
+  {
     "__comment__": "********************京王********************"
   },
   {
