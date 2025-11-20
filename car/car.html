@@ -77,7 +77,7 @@
           if (isNaN(seconds)) return "0:00";
           const min = Math.floor(seconds / 60);
           const sec = Math.floor(seconds % 60);
-          return `${min}:${sec.toString().padcarrt(2, "0")}`;
+          return `${min}:${sec.toString().padStart(2, "0")}`;
         }
         
         let match = data.find(item => item.com === com && item.car === car);
