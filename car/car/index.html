@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
 
   <title>ほくりく駅メロ図鑑</title>
-  <link rel="stylesheet" href="https://hokumelo.github.io/style.css"/>
+  <link rel="stylesheet" href="https://hokumelo.github.io/assets/css/common.css"/>
   <link rel="icon" href="" id="favicon">
 </head>
 <body>
@@ -70,7 +70,7 @@
     const com = params.get("com");
     const car = params.get("car");
   
-    fetch("https://hokumelo.github.io/car.json")
+    fetch("https://hokumelo.github.io/assets/json/car.json")
       .then(res => res.json())
       .then(data => {
         function formatTime(seconds) {
@@ -248,7 +248,7 @@
         }
       });
   
-    fetch("https://hokumelo.github.io/menu.json")
+    fetch("https://hokumelo.github.io/assets/json/menu.json")
       .then(res => res.json())
       .then(data => {
         const menu = document.getElementById("menu");

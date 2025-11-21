@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="北陸地区の駅メロディーをまとめたページです。">
 
   <title>ほくりく駅メロ図鑑 | 福井鉄道</title>
-  <link rel="stylesheet" href="https://hokumelo.github.io/style.css">
+  <link rel="stylesheet" href="https://hokumelo.github.io/assets/css/common.css">
   <link rel="icon" href="https://hokumelo.github.io/image/f1000.png">
 </head>
 <body>
@@ -45,7 +45,7 @@
   </footer>
 
   <script>
-    fetch('https://hokumelo.github.io/menu.json')
+    fetch('https://hokumelo.github.io/assets/json/menu.json')
       .then(res => res.json())
       .then(data => {
         const menu = document.getElementById('menu');
