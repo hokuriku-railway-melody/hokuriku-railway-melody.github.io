@@ -17,7 +17,7 @@
     "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/8c3234b6_jr-east_e7_tr12_chime.wav",
     "usecom": "JR東日本",
     "note": "呼称・車内チャイム以外W7系と同一",
-    "image": "https://hokumelo.github.io/image/e7_kagayaki.png",
+    "image": "https://hokumelo.github.io/assets/img/car/e7_kagayaki.png",
     "gallery": "none"
   },
   {
@@ -98,7 +98,7 @@
     "melody": "none",
     "usecom": "☆國鐵金澤☆",
     "note": "テスト",
-    "image": "https://hokumelo.github.io/image/413.png",
+    "image": "https://hokumelo.github.io/assets/img/car/413.png",
     "gallery": "none"
   }
 ]
