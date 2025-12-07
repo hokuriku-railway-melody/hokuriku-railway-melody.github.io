@@ -36,6 +36,36 @@
     "__comment__": "********************ひすい********************"
   },
   {
+    "com": "echigo-tokimeki",
+    "natcom": "えちごトキめき鉄道",
+    "sta": "ichiburi",
+    "natsta": "市振駅",
+    "up": "越中宮崎駅",
+    "upurl": "https://hokumelo.github.io/station/station/?com=ainokaze-toyama&sta=etchu-miyazaki",
+    "down": "親不知駅",
+    "downurl": "https://hokumelo.github.io/station/station/?com=echigo-tokimeki&sta=oyashirazu",
+    "line": "日本海ひすいライン,あいの風とやま鉄道線",
+    "lineurl": "https://hokumelo.github.io/line/echigo-tokimeki/nihonkai-hisui/,https://hokumelo.github.io/line/ainokaze-toyama/ainokaze-toyama/",
+    "color": "#3782bd,#00a556",
+    "platform": "上り線,下り線",
+    "ad": "接近,接近",
+    "sound": "村の鍛冶屋,エリーゼのために",
+    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/829d233f_ishikawa_ishikawa_kaga-kasama_1_approach.wav,none",
+    "note": "加賀笠間駅1番のりばで収録・非密着,none",
+    "image": "https://hokumelo.github.io/assets/img/car/455_hokuriku.png",
+    "numshape": "none",
+    "numcolor": "none",
+    "numpaint": "none",
+    "numcolorarea": "none",
+    "numsign": "none",
+    "numnum": "none",
+    "numsigncolor": "none",
+    "numnumcolor": "none",
+    "transfer": "none",
+    "transferurl": "none",
+    "gallery": "none"
+  },
+  {
     "__comment__": "********************はねうま********************"
   },
   {
