@@ -822,7 +822,7 @@
     "ad": "チャイム,チャイム,放送,接近,チャイム,接近",
     "sound": "2打点チャイム,2打点チャイム,予告放送,村の鍛冶屋,2打点チャイム,エリーゼのために",
     "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/1f8e76cb_ishikawa_ishikawa_kaga-kasama_1_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/587b722d_ishikawa_ishikawa_kaga-kasama_1_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/56d871b1_ishikawa_ishikawa_kaga-kasama_1_next.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/829d233f_ishikawa_ishikawa_kaga-kasama_1_approach.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/1f8e76cb_ishikawa_ishikawa_kaga-kasama_1_chime.wav,none",
-    "note": "非密着,非密着,非密着,非密着,加賀笠間駅1番のりばで収録・非密着,none",
+    "note": "非密着,非密着,非密着,案内放送・非密着,加賀笠間駅1番のりばで収録・非密着,none",
     "image": "https://hokumelo.github.io/assets/img/car/521_3rd_ishikawa.png",
     "numshape": "none",
     "numcolor": "none",
