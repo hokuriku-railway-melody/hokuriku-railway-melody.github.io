@@ -14,7 +14,7 @@
     "lineurl": "https://hokumelo.github.io/line/jr-east/joetsu-shinkansen/,https://hokumelo.github.io/line/jr-west/hokuriku-shinkansen/,https://hokumelo.github.io/line/jr-east/tohoku-shinkansen/",
     "type": "車内チャイム",
     "sound": "TR12",
-    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/melody/file/8c3234b6_jr-east_e7_tr12_chime.wav",
+    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/8c3234b6_jr-east_e7_tr12_chime.wav",
     "usecom": "JR東日本",
     "note": "呼称・車内チャイム以外W7系と同一",
     "image": "https://hokumelo.github.io/assets/img/car/e7_kagayaki.png",
@@ -61,6 +61,21 @@
   },
   {
     "__comment__": "********************JR西********************"
+  },
+  {
+    "com": "jr-west",
+    "natcom": "JR西日本",
+    "car": "kiha120",
+    "natcar": "キハ120形",
+    "line": "大糸線,高山本線,越美北線,関西本線,因美線,山陰本線,伯備線,木次線,芸備線,津山線,姫新線,福塩線,",
+    "lineurl": "https://hokumelo.github.io/line/jr-west/oito/,https://hokumelo.github.io/line/jr-west/takayama/,https://hokumelo.github.io/line/jr-west/etsumi-north/,https://hokumelo.github.io/line/jr-west/kansai/,https://hokumelo.github.io/line/jr-west/inbi/,https://hokumelo.github.io/line/jr-west/sanin/,https://hokumelo.github.io/line/jr-west/hakubi/,https://hokumelo.github.io/line/jr-west/kisuki/,https://hokumelo.github.io/line/jr-west/geibi/,https://hokumelo.github.io/line/jr-west/tsuyama/,https://hokumelo.github.io/line/jr-west/kishin/,https://hokumelo.github.io/line/jr-west/fukuen/",
+    "type": "車内チャイム",
+    "sound": "1打点チャイム",
+    "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/000",
+    "usecom": "JR西日本",
+    "note": "非密着",
+    "image": "https://hokumelo.github.io/assets/img/car/kiha120-takayama-red.png",
+    "gallery": "none"
   },
   {
     "__comment__": "********************JR海********************"
