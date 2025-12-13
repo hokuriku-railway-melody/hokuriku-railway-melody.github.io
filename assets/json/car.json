@@ -72,7 +72,7 @@
     "type": "車内チャイム,車内チャイム,車内チャイム,車内チャイム,車内チャイム,警報,案内放送,案内放送,案内放送,案内放送",
     "sound": "1打点チャイム,1打点チャイム,1打点チャイム,1打点チャイム,2打点チャイム,扉警報,列車案内,次駅案内,次駅案内,接近駅案内",
     "melody": "https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/1cb6915e_jr-west_kiha120_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/f511f2e8_jr-west_kiha120_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/4ad8df6e_jr-west_kiha120_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/3b97a356_jr-west_kiha120_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/5238d624_jr-west_kiha120_chime.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/f4d02be9_jr-west_kiha120_alert.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/f7f06652_jr-west_kiha120_info.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/86e10de7_jr-west_kiha120_next.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/9ba6f262_jr-west_kiha120_next.wav,https://raw.githubusercontent.com/hokumelo/hokumelo.github.io/main/assets/sounds/melody/16d406c9_jr-west_kiha120_approach.wav",
-    "usecom": "JR西日本",
+    "usecom": "JR西日本,JR西日本,JR西日本,JR西日本,JR西日本,JR西日本,JR西日本,JR西日本,JR西日本,JR西日本",
     "note": "非密着,非密着,非密着,非密着,非密着,非密着,案内放送・非密着,案内放送・非密着,案内放送・非密着,案内放送・非密着",
     "image": "https://hokumelo.github.io/assets/img/car/kiha120-takayama-red.png",
     "gallery": "none"
